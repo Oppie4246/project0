@@ -5,15 +5,15 @@ import StartPage from "./components/StartPage/StartPage";
 
 // Feature: Register Seller
 import Seller from "./components/Seller/Seller";
-import SellerList from "./componets/Seller/SellerList";
+import SellerList from "./components/Seller/SellerList";
 
 // Feature: Manage Properties
-import Property from "./componets/Property/Property";
-import PropertyList from "./componets/Property/PropertyList";
+import Property from "./components/Property/Property";
+import PropertyList from "./components/Property/PropertyList";
 
 // Feature: Register Buyer
-import Buyer from "./componets/Buyer/Buyer";
-import BuyerList from "./componets/Buyer/BuyerList";
+import Buyer from "./components/Buyer/Buyer";
+import BuyerList from "./components/Buyer/BuyerList";
 
 
 function App() {
