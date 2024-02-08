@@ -1,6 +1,10 @@
 import React from "react";
 import "./StartPage.css";
 
-// Code
-
-export default StartPage;
+export default ()=> {
+    return (
+        <div>
+            <h1>Start Page</h1>
+        </div>
+    )
+}
