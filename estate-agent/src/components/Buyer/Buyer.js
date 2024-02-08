@@ -1,5 +1,5 @@
 import React, {useState, useReducer, useEffect} from "react";
-import BuyerList from "./BuyerList";
+import BuyerForm from "./BuyerForm";
 import "./Buyer.css";
 
 export default ()=> {
