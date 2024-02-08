@@ -1,12 +1,10 @@
 import React from "react";
 import "./BuyerList.css";
 
-// Code
-
 export default ()=> {
     return (
         <div>
-            <h1>Buyer List</h1>
+            <h1>Buyer Form</h1>
         </div>
     )
 }
