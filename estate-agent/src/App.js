@@ -18,21 +18,35 @@ import Buyer from "./components/Buyer/Buyer";
 import BuyerList from "./components/Buyer/BuyerList";
 
 // Feature: Import Nav
-import Nav from "./components/Nav/Nav";
+import {Nav} from "./components/Nav/Nav";
+
+//About Section
+import About from "./components/About/About";
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<StartPage/>}>
-          <Route path="seller" element={<Seller/>}/>       
-          <Route path="property" element={<Property/>}/>                               
-          <Route path="buyer" element={<Buyer/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      
+        <Nav />
+        <Routes>
+          <Route path="/about" element={<About/>} />
+          <Route path="/property" element={<Property/>} />
+          <Route path="/Buyer" element={<Buyer/>} />
+        </Routes>
+        
+    </div>
   );
 }
 export default App;
+
+{/* <BrowserRouter>
+
+<Routes>
+          <Route path="/" element={<StartPage/>}>
+            <Route path="seller" element={<Seller/>}/>       
+            <Route path="property" element={<Property/>}/>                               
+            <Route path="buyer" element={<Buyer/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter> */}
