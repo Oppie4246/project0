@@ -1,6 +1,10 @@
 import React from "react";
 import "./SellerList.css";
 
-// Code
-
-export default SellerList;
+export default ()=> {
+    return (
+        <div>
+            <h1>Seller List</h1>
+        </div>
+    )
+}

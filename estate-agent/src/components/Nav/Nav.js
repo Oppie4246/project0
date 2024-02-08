@@ -1,6 +1,9 @@
 import React, {useState, useReducer, useEffect} from "react";
 
-
-// Code
-
-export default Nav;
+export default ()=> {
+    return (
+        <div>
+            <h1>Nav</h1>
+        </div>
+    )
+}

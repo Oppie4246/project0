@@ -3,4 +3,10 @@ import "./BuyerList.css";
 
 // Code
 
-export default BuyerList;
+export default ()=> {
+    return (
+        <div>
+            <h1>Buyer List</h1>
+        </div>
+    )
+}

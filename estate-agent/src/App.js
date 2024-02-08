@@ -17,18 +17,22 @@ import PropertyList from "./components/Property/PropertyList";
 import Buyer from "./components/Buyer/Buyer";
 import BuyerList from "./components/Buyer/BuyerList";
 
+// Feature: Import Nav
+import Nav from "./components/Nav/Nav";
+
 
 function App() {
   return (
-      <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<StartPage/>}>
-                  <Route path="Seller" element={<Seller/>}/>       
-                  <Route path="Property" element={<Property/>}/>                               
-                  <Route path="Buyer" element={<Buyer/>}/>
-                </Route>
-          </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<StartPage/>}>
+          <Route path="seller" element={<Seller/>}/>       
+          <Route path="property" element={<Property/>}/>                               
+          <Route path="buyer" element={<Buyer/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;
