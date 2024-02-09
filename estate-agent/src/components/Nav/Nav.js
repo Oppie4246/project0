@@ -33,6 +33,9 @@ export const Nav = () => {
             <li>
                 <NavLink to="/Buyer">Buyer</NavLink>
             </li>
+            <li>
+                <NavLink to="/Seller">Seller</NavLink>
+            </li>
         </ul>
     </nav>
     );
