@@ -76,6 +76,10 @@ export default ()=> {
                         <td><label><input type="checkbox" /> Pet Friendly</label></td>
                         <td><label><input type="checkbox" /> Furnished</label></td>
                     </tr>
+                    <tr>
+                        <td><label><input type="checkbox" /> Shared Ownership</label></td>
+                        <td><label><input type="checkbox" /> Gym Included</label></td>
+                    </tr>
                 </table>
                 <Link to="/sellaproperty/confirm"><button>Submit</button></Link>
             </form>
