@@ -15,7 +15,7 @@ import PropertyList from "./components/Property/PropertyList";
 
 // Feature: Register Buyer
 import Buyer from "./components/Buyer/Buyer";
-import BuyerList from "./components/Buyer/BuyerList";
+import BuyerForm from "./components/Buyer/BuyerForm";
 
 // Feature: Import Nav
 import {Nav} from "./components/Nav/Nav";
@@ -26,6 +26,7 @@ import About from "./components/About/About";
 
 function App() {
   return (
+
     <div className="App">
       
         <Nav />
