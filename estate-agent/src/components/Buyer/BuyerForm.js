@@ -1,28 +1,18 @@
 import React from "react";
 import { useRef, useState } from 'react';
+import {useNavigate} from 'react-router-dom';
 
-const BuyerForm = (props) => {
-    
-    const firstNameRef = useRef();
-    const surnameRef = useRef();
-    const emailRef = useRef();
-    const phoneRef = useRef();
+// const buyerDetails = () =>
+//     const [buyerData, setBuyerData] = useState({
 
-    function saveBuyer(){
-        let firstName=firstNameRef.current.value;
-        sessionStorage.setItem("firstName", JSON.stringify(firstName));
-        let surname=surnameRef.current.value;
-        sessionStorage.setItem("surname", JSON.stringify(surname));
-        let email=emailRef.current.value;
-        sessionStorage.setItem("email", JSON.stringify(email));
-        let phone=phoneRef.current.value;
-        sessionStorage.setItem("phone", JSON.stringify(phone));
-    };
+//     }
+
+const BuyerForm = (props) => {   
 
     return (
         <div>
-            <h1>Buyer Form</h1>
-            <form name="buyerForm" >
+            <h1>Register Buyer</h1>
+            {/* <form onSubmit={props.registerBuyer} name="registerBuyer" >
                 <label htmlFor="firstName">First Name: </label>
                 <input id="firstName" name="firstName" type="text" ref={firstNameRef} />
                 <label htmlFor="surname">Surname: </label>
@@ -31,8 +21,8 @@ const BuyerForm = (props) => {
                 <input id="email" name="email" type="email"ref={emailRef}/>
                 <label htmlFor="phone">Telephone: </label>
                 <input id="phone" name="phone" type="tel" ref={phoneRef} />
-                <input type="button" onClick={saveBuyer} value="Submit" />
-            </form>
+                <button type="submit">Register Buyer</button> */}
+            {/* </form> */}
         </div>
     );
 };
