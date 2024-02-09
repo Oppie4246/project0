@@ -1,9 +1,39 @@
 import React, {useState, useReducer, useEffect} from "react";
 
-export default ()=> {
+import {Link, NavLink} from "react-router-dom";
+import "./Nav.css"
+
+
+
+export const Nav = () => {
+
+    const[menuOpen, setMenuOpen] = useState(false)
+
     return (
-        <div>
-            <h1>Nav</h1>
+    
+    <nav>
+
+        <Link to ="/" className="title" >QA ESTATES</Link>
+        
+        <div className="menu" onClick={()=> {setMenuOpen(!menuOpen);
+        }}>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    )
-}
+        
+        <img src="" alt="" />
+        <ul className={menuOpen ? "open" : ""}>
+            <li>
+                <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
+                <NavLink to="/property">Properties</NavLink>
+            </li>
+            <li>
+                <NavLink to="/Buyer">Buyer</NavLink>
+            </li>
+        </ul>
+    </nav>
+    );
+};
