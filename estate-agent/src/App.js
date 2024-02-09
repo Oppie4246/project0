@@ -23,6 +23,9 @@ import {Nav} from "./components/Nav/Nav";
 //About Section
 import About from "./components/About/About";
 
+//Upload and confirm a property
+import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
+import ConfirmListing from "./components/Seller/ConfirmListing";
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/about" element={<About/>} />
+          <Route path="/properties" element={<PropertyList/>} />
+          <Route path="/sellaproperty" element={<SellerPropertyForm/>} />
+          <Route path="/sellaproperty/confirm" element={<ConfirmListing/>} />
           <Route path="/property" element={<Property/>} />
           <Route path="/Buyer" element={<Buyer/>} />
         </Routes>
