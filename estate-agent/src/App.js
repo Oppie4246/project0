@@ -34,6 +34,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/property" element={<Property/>} />
           <Route path="/Buyer" element={<Buyer/>} />
+          <Route path="/buyerForm" element={<BuyerForm/>} />
         </Routes>
         
     </div>
