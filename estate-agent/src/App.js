@@ -15,7 +15,7 @@ import PropertyList from "./components/Property/PropertyList";
 
 // Feature: Register Buyer
 import Buyer from "./components/Buyer/Buyer";
-import BuyerList from "./components/Buyer/BuyerList";
+import BuyerForm from "./components/Buyer/BuyerForm";
 
 // Feature: Import Nav
 import Nav from "./components/Nav/Nav";
@@ -26,10 +26,12 @@ function App() {
     <BrowserRouter>
       <Nav />
       <Routes>
+      <Route path="buyerform" element={<BuyerForm/>}/>
         <Route path="/" element={<StartPage/>}>
           <Route path="seller" element={<Seller/>}/>       
           <Route path="property" element={<Property/>}/>                               
           <Route path="buyer" element={<Buyer/>}/>
+          
         </Route>
       </Routes>
     </BrowserRouter>
