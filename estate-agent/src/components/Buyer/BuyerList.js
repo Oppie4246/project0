@@ -1,9 +1,9 @@
 import React, {useState, useReducer, useEffect} from "react";
 import { Link } from "react-router-dom";
-import BuyerForm from "./BuyerForm";
 import "./Buyer.css";
 
 const BuyerList = () => {
+       
     return (
         <div>
             <table name="buyerList" legend="Current Buyers">
@@ -14,16 +14,16 @@ const BuyerList = () => {
                      <th>Phone</th>
                  </tr>
                 <tr>
-                     {/* <td>{sessionStorage.getitem(firstName)}</td>
-                     <td>{sessionStorage.getitem(surname)}</td>
-                     <td>{sessionStorage.getitem(email)}</td>
-                     <td>{sessionStorage.getitem(phone)}</td> */}
+                     <td>{'firstName'}</td>
+                     <td>{'surname'}</td>
+                     <td>{'email'}</td>
+                     <td>{'phone'}</td>
                  </tr>
              </table>
-            
-            {/* <Link onClick={displayBuyer()}>Display Buyers</Link> */}
+         
             <br></br>
             <Link to="/buyerForm" >Register Buyer</Link>
+            <br></br>
             <Link to="/" >Home</Link>
         </div>
     );

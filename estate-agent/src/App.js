@@ -2,17 +2,70 @@ import React from "react";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
 import './App.css';
 
+// Start Page of Website
+import StartPage from "./components/StartPage/StartPage";
+
+// Feature: Register Seller
+import Seller from "./components/Seller/Seller";
+import SellerList from "./components/Seller/SellerList";
+
+// Feature: Manage Properties
+import Property from "./components/Property/Property";
+import PropertyList from "./components/Property/PropertyList";
+import SellerPropertyFrom from "./components/Seller/SellerPropertyForm";
+import ConfirmListing from "./components/Seller/ConfirmListing";
+
+// Feature: Register Buyer
+import Buyer from "./components/Buyer/Buyer";
+import BuyerForm from "./components/Buyer/BuyerForm";
+import BuyerList from "./components/Buyer/BuyerList";
+
+// Feature: Import Nav
+import {Nav} from "./components/Nav/Nav";
+
+//About Section
+import About from "./components/About/About";
+
 import Person from "./components/Person/Person";
+
+
+
+
+
 
 
 function App() {
   return (
 
     <div className="App">
-
-        <Person />
-
+     
+        <Nav />
+        <Routes>
+          <Route path="/about" element={<About/>} />
+          <Route path="/properties" element={<PropertyList/>} />
+          <Route path="sellproperty" element={<SellerPropertyFrom />} />
+          <Route path="sellproperty/confirm" element={<ConfirmListing />} />
+          <Route path="/property" element={<Property />} />
+          <Route path="/buyer" element={<Buyer/>} />
+          <Route path="/buyerForm" element={<BuyerForm/>} />
+          <Route path="/buyerList" element={<BuyerList/>} />
+          <Route path="/seller" element={<Seller/>} />
+          <Route path ="/sellerLiist" element={<SellerList/>}/>
+          <Route path="/person" element={<Person />} />
+        </Routes>
+        
     </div>
   );
 }
 export default App;
+
+{/* <BrowserRouter>
+
+<Routes>
+          <Route path="/" element={<StartPage/>}>
+            <Route path="seller" element={<Seller/>}/>       
+            <Route path="property" element={<Property/>}/>                               
+            <Route path="buyer" element={<Buyer/>}/>
+          </Route>
+        </Routes>
+      </BrowserRouter> */}
