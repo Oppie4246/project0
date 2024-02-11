@@ -27,6 +27,7 @@ import {Nav} from "./components/Nav/Nav";
 import About from "./components/About/About";
 
 import Person from "./components/Person/Person";
+import LoginSignup from "./components/LoginSignup/LoginSignup";
 
 
 
@@ -41,6 +42,7 @@ function App() {
      
         <Nav />
         <Routes>
+          <Route path="/" element={<LoginSignup/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/properties" element={<PropertyList/>} />
           <Route path="sellproperty" element={<SellerPropertyFrom />} />
