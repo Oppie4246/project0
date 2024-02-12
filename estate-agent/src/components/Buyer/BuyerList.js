@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Buyer.css';
 
 function BuyerList(props) {
 
     return (
         <div className="buyerList">
-            <h3>{props.buyer.firstName}, {props.buyer.surname}, {props.buyer.email}, {props.buyer.phone}, {props.buyer.buyerId} <Link to="/buyer"><button>Edit</button></Link></h3> 
             <table>    
                 <tr>
                     <td>
@@ -26,6 +26,7 @@ function BuyerList(props) {
                     </td>
                 </tr>
             </table>
+            <h3><Link to="/buyer"><button>Edit Buyer {props.buyer.buyerId}</button></Link></h3>
         </div>     
     )
 }
