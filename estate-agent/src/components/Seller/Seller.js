@@ -5,9 +5,9 @@ import "./Seller.css";
 
 const Seller = () => {
     return (
-       <div>            
-           <br></br>
-           <Link to="/sellerForm" ><h1>Register New Seller</h1></Link>
+       <div>
+        <h1>Looking to sell property?</h1>           
+           <Link to="/sellerForm" ><h1>New Seller Registration</h1></Link>
        </div>
    );
 };
