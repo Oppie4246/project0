@@ -6,8 +6,8 @@ import "./Buyer.css";
 const Buyer = () => {
      return (
         <div>            
-            <br></br>
-            <Link to="/buyerForm" ><h1>Register New Buyer</h1></Link>
+            <h1>Looking to buy property?</h1>
+            <Link to="/buyerForm" ><h1>New Buyer Registration</h1></Link>
         </div>
     );
 };
