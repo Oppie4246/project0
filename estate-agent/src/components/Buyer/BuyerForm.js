@@ -1,38 +1,51 @@
-import React from "react";
-import { useRef, useState } from 'react';
+import React, { useState } from "react";
+import './BuyerForm.css';
+import { Link, useEffect } from 'react-router-dom';
 
-const BuyerForm = (props) => {
+import profile from './profile.png';
+import phone from './phone.png';
+import email from './email.png';
+
+
+const BuyerForm = () => {   
+
+    const [formData, setForm] = useState({});
     
-    const firstNameRef = useRef();
-    const surnameRef = useRef();
-    const emailRef = useRef();
-    const phoneRef = useRef();
-
-    function saveBuyer(){
-        let firstName=firstNameRef.current.value;
-        sessionStorage.setItem("firstName", JSON.stringify(firstName));
-        let surname=surnameRef.current.value;
-        sessionStorage.setItem("surname", JSON.stringify(surname));
-        let email=emailRef.current.value;
-        sessionStorage.setItem("email", JSON.stringify(email));
-        let phone=phoneRef.current.value;
-        sessionStorage.setItem("phone", JSON.stringify(phone));
+    function submitForm(e){
+        e.preventDefault();
+        for(let key in formData) {
+            sessionStorage.setItem(key, formData[key])
+        };
+        sessionStorage.setItem('buyerId', 1);
     };
 
     return (
-        <div>
-            <h1>Buyer Form</h1>
-            <form name="buyerForm" >
-                <label htmlFor="firstName">First Name: </label>
-                <input id="firstName" name="firstName" type="text" ref={firstNameRef} />
-                <label htmlFor="surname">Surname: </label>
-                <input id="surname" name="surname" type="text" ref={surnameRef}/>
-                <label htmlFor="email">Email: </label>
-                <input id="email" name="email" type="email"ref={emailRef}/>
-                <label htmlFor="phone">Telephone: </label>
-                <input id="phone" name="phone" type="tel" ref={phoneRef} />
-                <input type="button" onClick={saveBuyer} value="Submit" />
-            </form>
+        <div className='container'>
+            <div className='header'>
+                <div className='title'>Register New Buyer</div>
+                <div className='underline'></div>
+            </div>
+            <div className='inputs'>
+                <div className='input'>
+                    <img src={profile} alt='silhouette icon image of a person' />
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onInput={e=>setForm({...formData, firstName: e.target.value})} />
+                </div>
+                <div className='input'>
+                    <img src={profile} alt='silhouette icon image of a person' />
+                    <input type="text" id="surname" name="surname" placeholder="Surname" onInput={e=>setForm({...formData, surname: e.target.value})} />
+                </div>
+                <div className='input'>
+                    <img src={email} alt='silhouette icon image of an email evelope' />
+                    <input type="email" id="email" name="email" placeholder="Email Address" onInput={e=>setForm({...formData, email: e.target.value})} />
+                </div>
+                <div className='input'>
+                    <img src={phone} alt='silhouette icon image of an old typical phone' />
+                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, phone: e.target.value})} />
+                </div>
+            </div>
+            <div className='submitContainer'>
+                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyerList">Register Buyer</Link></div>
+            </div>
         </div>
     );
 };

@@ -62,6 +62,18 @@
     font-size: 19px;
 }
 
+.forgotPassword{
+    padding-left: 62px;
+    margin-top: 27px;
+    color: #797979;
+    font-size: 18px;
+}
+
+.forgotPassword span{
+    color:#24005ee0;
+    cursor: pointer;
+}
+
 .submitContainer{
     display: flex;
     gap: 30px;
@@ -82,10 +94,7 @@
     cursor: pointer;
 }
 
-.link {
-    color: #fff;
-}
-
-.link:hover{
-    color: #797979;
+.grey{
+    background: #EAEAEA;
+    color: #676767;
 }
