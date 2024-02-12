@@ -18,14 +18,14 @@ export default()=> {
             secondName: "Smith",
             email: "dave@cats.com",
             phone: "01234567891",
-            buyerId: 1
+            buyerId: 2
         },
         {
             firstName: "Dave",
             secondName: "Smith",
             email: "dave@cats.com",
             phone: "01234567891",
-            buyerId: 1
+            buyerId: 3
         }
     ];
        

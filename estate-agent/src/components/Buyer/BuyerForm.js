@@ -59,7 +59,7 @@ const BuyerForm = () => {
                 </div>
             </div>
             <div className='submitContainer'>
-                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyerList">Register Buyer</Link></div>
+                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyer">Register Buyer</Link></div>
             </div>
         </div>
     );
