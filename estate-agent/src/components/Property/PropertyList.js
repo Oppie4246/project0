@@ -12,7 +12,7 @@ export default ()=> {
                 <table>    
                     <tr>
                         <td>
-                            <img class="leadImage" src={require('../Seller/SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                            <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
                         </td>
                         <td>
                             <h3>Property Type</h3>
@@ -45,7 +45,7 @@ export default ()=> {
                 <table>    
                     <tr>
                         <td>
-                            <img class="leadImage" src={require('../Seller/SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                            <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
                         </td>
                         <td>
                             <h3>Property Type</h3>
@@ -78,7 +78,7 @@ export default ()=> {
                 <table>    
                     <tr>
                         <td>
-                            <img class="leadImage" src={require('../Seller/SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                            <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
                         </td>
                         <td>
                             <h3>Property Type</h3>
@@ -111,7 +111,7 @@ export default ()=> {
                 <table>    
                     <tr>
                         <td>
-                            <img class="leadImage" src={require('../Seller/SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                            <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
                         </td>
                         <td>
                             <h3>Property Type</h3>
@@ -144,7 +144,7 @@ export default ()=> {
                 <table>    
                     <tr>
                         <td>
-                            <img class="leadImage" src={require('../Seller/SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                            <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
                         </td>
                         <td>
                             <h3>Property Type</h3>

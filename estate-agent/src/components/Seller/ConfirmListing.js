@@ -48,10 +48,10 @@ export default ()=> {
                 </p>
 
                 <div id="images">
-                    <img class="images" src={require('./SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('./SellerPropertyImages/bathroom1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('./SellerPropertyImages/bathroom2.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('./SellerPropertyImages/bedroom1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/bathroom1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/bathroom2.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/bedroom1.jpeg')} alt="Bathroom image" />
                     <img class="images" src={require('./SellerPropertyImages/gym.jpeg')} alt="Bathroom image" />
                     <img class="images" src={require('./SellerPropertyImages/kitchen.jpeg')} alt="Bathroom image" />
                 </div>
