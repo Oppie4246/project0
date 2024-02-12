@@ -30,15 +30,8 @@ import About from "./components/About/About";
 
 //Upload and confirm a property
 import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
-
-
 import Person from "./components/Person/Person";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
-
-
-
-
-
 
 function App() {
   return (
@@ -70,10 +63,8 @@ function App() {
           <Route path="/seller" element={<Seller/>} />
           <Route path ="/sellerLiist" element={<SellerList/>}/>
           <Route path="/person" element={<Person />} />
-
-        </Routes>
-        
-        <h1>hello</h1>
+        </Routes>        
+      
     </div>
   );
 }
