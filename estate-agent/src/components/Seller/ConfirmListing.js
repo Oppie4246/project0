@@ -52,8 +52,8 @@ export default ()=> {
                     <img class="images" src={require('../../assets/bathroom1.jpeg')} alt="Bathroom image" />
                     <img class="images" src={require('../../assets/bathroom2.jpeg')} alt="Bathroom image" />
                     <img class="images" src={require('../../assets/bedroom1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('./SellerPropertyImages/gym.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('./SellerPropertyImages/kitchen.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/gym.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('../../assets/kitchen.jpeg')} alt="Bathroom image" />
                 </div>
                 <button type="submit">Submit</button>
             </form>
