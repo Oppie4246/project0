@@ -81,3 +81,11 @@
     font-weight: 900;
     cursor: pointer;
 }
+
+.link {
+    color: #fff;
+}
+
+.link:hover{
+    color: #797979;
+}
