@@ -1,75 +1,61 @@
 import React, { useState } from "react";
-
+import "./SellerPropertyForm.css";
 
 export default ()=> {
 
     return (
         <div id="body">
             <h1>Confirm Property</h1>
+            <p>Please edit or confirm the following details:</p>
             <form>
-                <h3>Property Type</h3>
-                <select>
-                    <option>Detatched</option>
-                    <option>Semi-Detatched</option>
-                    <option>Terraced</option>
-                    <option>Flat</option>
-                    <option>Bungalow</option>
-                    <option>Land</option>
-                    <option>Park Home</option>
-                    <option>Student Halls</option>
-                </select>
-                <h3>Number of Bedrooms</h3>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6+</option>
-                </select>
-                <h3>Price: </h3>
-                <input type="number"/>
-                <h3>Address: </h3>
                 <table>
                     <tr>
-                        <td>Address Line 1: 
-                        </td><input /><br/>
-                    </tr>
-                    <tr>
-                        <td>Address Line 2: 
-                        </td><input /><br/>
-                    </tr>
-                    <tr>
-                        <td>City: 
-                        </td><input /><br/>
-                    </tr>
-                    <tr>
-                        <td>County: 
-                        </td><input /><br/>
-                    </tr>
-                    <tr>
-                        <td>Postcode: 
-                        </td><input /><br/>
-                    </tr>
-                </table>
-                <h3>Photos: </h3>
-                <input id="img" type="file" />
-                <h3>Extra Details: </h3>
-                <textarea place/>
-                <h3>Attributes</h3>
-                <table>
-                    <tr>
-                        <td><label><input type="checkbox" /> Garden</label></td>
-                        <td><label><input type="checkbox" /> Parking</label></td>
-                        <td><label><input type="checkbox" /> Retirement Home</label></td>
-                    </tr>
-                    <tr>
-                        <td><label><input type="checkbox" /> Student Accomodation</label></td>
-                        <td><label><input type="checkbox" /> Pet Friendly</label></td>
-                        <td><label><input type="checkbox" /> Furnished</label></td>
+                        <td>
+                            <h3>Address <button>Edit</button></h3>
+                            <p>Address Line 1</p>
+                            <p>Address Line 2</p>
+                            <p>City</p>
+                            <p>County</p>
+                            <p>Postcode</p>
+                        </td>
+                        <td>
+                            <h3>Property Type <button>Edit</button></h3>
+                            <p>Flat</p>
+                            <h3>Bedrooms <button>Edit</button></h3>
+                            <p>2</p>
+                        </td>
+                        <td>
+                            <h3>Price <button>Edit</button></h3>
+                            <h3>£240,000 </h3>
+                        </td>
+                        <td>
+                            <h3>Features <button>Edit</button></h3>
+                            <ul>
+                                <li>Parking</li>
+                                <li>Pet Friendly</li>
+                                <li>Gym Included</li>
+                            </ul>
+                        </td>
                     </tr>
                 </table>
-                
+
+                <h3>Property Description</h3>
+                <p>Stunning two bedroom balcony apartment facing the waterfront available 4th February 2024. 
+                    Situated on the 2nd Floor, the apartment offers a large open plan living room and kitchen 
+                    space with integrated appliances, dishwasher, fridge/freezer, oven and hob and a separate 
+                    utility room housing a washer/dryer.
+                    Large double bedrooms with walk through wardrobe to en-suite bathrooms with large walk in showers.
+                </p>
+
+                <div id="images">
+                    <img class="images" src={require('./SellerPropertyImages/image1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('./SellerPropertyImages/bathroom1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('./SellerPropertyImages/bathroom2.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('./SellerPropertyImages/bedroom1.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('./SellerPropertyImages/gym.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={require('./SellerPropertyImages/kitchen.jpeg')} alt="Bathroom image" />
+                </div>
+                <button type="submit">Submit</button>
             </form>
         </div>
     )
