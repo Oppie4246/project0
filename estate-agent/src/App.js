@@ -8,6 +8,7 @@ import StartPage from "./components/StartPage/StartPage";
 // Feature: Register Seller
 import Seller from "./components/Seller/Seller";
 import SellerList from "./components/Seller/SellerList";
+import SellerForm from "./components/Seller/SellerForm";
 
 // Feature: Manage Properties
 import Property from "./components/Property/Property";
@@ -29,30 +30,30 @@ import About from "./components/About/About";
 
 //Upload and confirm a property
 import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
-
-
 import Person from "./components/Person/Person";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 
-
-
-
-
-
 function App() {
   return (
-
+    
     <div className="App">
+
+
      
         <Nav />
         <Routes>
           <Route path="/" element={<LoginSignup/>} />
+
           <Route path="/about" element={<About/>} />
           <Route path="/properties" element={<PropertyList/>} />
           <Route path="/sellaproperty" element={<SellerPropertyForm/>} />
           <Route path="/sellaproperty/confirm" element={<ConfirmListing/>} />
           <Route path="/property" element={<Property/>} />
           <Route path="/Buyer" element={<Buyer/>} />
+
+          <Route path="/Seller" element={<Seller/>} />
+          <Route path="/SellerForm" element={<SellerForm/>} />
+
           <Route path="sellproperty" element={<SellerPropertyFrom />} />
           <Route path="sellproperty/confirm" element={<ConfirmListing />} />
           <Route path="/property" element={<Property />} />
@@ -62,8 +63,8 @@ function App() {
           <Route path="/seller" element={<Seller/>} />
           <Route path ="/sellerLiist" element={<SellerList/>}/>
           <Route path="/person" element={<Person />} />
-        </Routes>
-        
+        </Routes>        
+      
     </div>
   );
 }
