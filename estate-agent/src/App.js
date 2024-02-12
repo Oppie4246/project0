@@ -29,14 +29,12 @@ import About from "./components/About/About";
 
 //Upload and confirm a property
 import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
-import ConfirmListing from "./components/Seller/ConfirmListing";
-
-import Person from "./components/Person/Person";
-import LoginSignup from "./components/LoginSignup/LoginSignup";
 
 
 import Person from "./components/Person/Person";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
+
+
 
 
 
