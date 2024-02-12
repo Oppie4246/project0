@@ -13,10 +13,25 @@ const BuyerForm = () => {
     
     function submitForm(e){
         e.preventDefault();
-        for(let key in formData) {
-            sessionStorage.setItem(key, formData[key])
-        };
-        sessionStorage.setItem('buyerId', 1);
+        console.log(formData);
+                
+    //     fetch('https://www.nextpoint.co.uk/test.php'), {
+    //         method: 'POST',
+    //         credentials: "include",
+    //         headers: {
+    //             'Accept': 'application/json, text/plain, */*',
+    //             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    //         },
+    //         body: JSON.stringify({formData})
+    //     }
+    //     .then(res=> res.json())
+    //     .then(res=> console.log(content));
+    //     };
+          
+
+    //     for(let key in formData) {
+    //         sessionStorage.setItem(key, formData[key])
+    //     };
     };
 
     return (
@@ -40,7 +55,7 @@ const BuyerForm = () => {
                 </div>
                 <div className='input'>
                     <img src={phone} alt='silhouette icon image of an old typical phone' />
-                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, phone: e.target.value})} />
+                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, phone: e.target.value, buyerId: 1})} />
                 </div>
             </div>
             <div className='submitContainer'>
