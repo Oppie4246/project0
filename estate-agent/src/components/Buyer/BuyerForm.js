@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import './BuyerForm.css';
 import { Link, useEffect } from 'react-router-dom';
 
-import profile from './profile.png';
-import phone from './phone.png';
-import email from './email.png';
+import profile from '../../assets/profile.png'
+import phone from '../../assets//phone.png';
+import email from '../../assets/email.png';
 
 
 const BuyerForm = () => {   
