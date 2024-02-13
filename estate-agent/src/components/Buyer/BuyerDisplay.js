@@ -1,65 +1,53 @@
-// import React, {useState, useEffect} from "react";
-// import { Link } from "react-router-dom";
-// import "./BuyerDisplay.css";
-// //import database from "../database/buyers.json
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./BuyerDisplay.css";
 
-// import Axios from "axios";
-// import BUYERO from '../database/buyers.json'
+import styles from "./BuyerDisplay.module.css";
 
 
 
+const App = () => {
+  const [posts, setPosts] = useState([]);
 
+  const getData = () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
-// function BuyerDisplay(){
+    fetch("http://localhost:8000/buyers", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setPosts(result))
+      .catch((error) => console.log("error", error));
+  };
 
-//      const [buyers, setBuyers] =useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
 
+  return (
+    <div className="styles.container">
 
-//      useEffect(() => {
-
-//          Axios.get("../database/buyers.json").then((res) => {
-//              setBuyers(res.data);
-//          }); 
-
-//      }, []);
+        <button className={styles.button} >DISPLAY BUYERS</button>
+        <br></br>
 
     
+      {posts.map((post) => (
 
-//     return(
-//         <div className="BuyerDisplay">
+        <div className={styles.buyerBox} key={post.buyerID}>
+          <p>{`Buyer ID: ${post.buyerID}`}</p>
+          <p>{`First Name: ${post.firstname}`}</p>
+          <p>{`Surname: ${post.surname}`}</p>
+          <p>{`Email: ${post.email}`}</p>
+          <p>{`Telephone: ${post.telephone}`}</p>
+          <br></br>
+        </div>
+    
 
-//             <button>DISPLAY BUYERS</button>
-//             <br></br>
+      ))}
+    </div>
+    
+  );
+};
 
-//             {
-//                 BUYERO.map(record => {
-//                     return(
-//                         <div className="container">
-//                             <p>{`Buyer ID: ${record.buyerID}`}</p>
-//                             <p>{`First name: ${record.firstname}`}</p>
-//                             <p>{`Surname: ${record.surname}`}</p>
-//                             <p>{`Email: ${record.email}`}</p>
-//                             <p>{`Telephone: ${record.telephone}`}</p>
-
-//                         </div>
-//                     )
-//                 })
-//             }
-
-//             {/* <button>Display Buyers</button>
-//             {buyers.map((buyer, index) => (
-//                 <div key={index}>
-//                     <p>{`FirstName: ${buyer.firstname}`} </p>
-//                     <p>{`Surname: ${buyer.surname}`}</p>
-//                     <p>{`Email: ${buyer.email}`}</p>
-//                     <p>{`Telephone: ${buyer.telephone}`}</p>
-//                 </div>
-
-//             ))}
-//              */}
-//         </div>
-//     );
-// }
-
-
-// export default BuyerDisplay;
+export default App;

@@ -11,12 +11,15 @@ import "./Buyer.css";
 const Buyer = () => {
      return (
         <div>
-            <h1>JSON SERVER</h1>
+            <h1>BUYERS</h1>
             <br></br>
             <Link to="/buyerForm" >Register New Buyer</Link>
+            
+            <br></br>
+            <Link to="/buyerdisplay" >Display Buyers</Link>
 
         </div>
     );
 };
 
-export default Buyer();
+export default Buyer;

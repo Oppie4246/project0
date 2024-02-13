@@ -1,48 +1,50 @@
-import React, {useState, useEffect} from 'react';
-import Link from "react-router-dom";
-import "./SellerDisplay.css"
-
-import Axios from "axios";
-import SELLERO from "../database/sellers.json"
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
-function SellerDisplay(){
+import styles from "../Buyer/BuyerDisplay.module.css";
 
-    const [sellers, setSellers] = useState([]);
+const App = () => {
+  const [posts, setPosts] = useState([]);
 
-    useEffect(() => {
+  const getData = () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
-        Axios.get("../database/sellers.json").then((res) => {
-            setSellers(res.data);
-        });
+    fetch("http://localhost:8001/sellers", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setPosts(result))
+      .catch((error) => console.log("error", error));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div classname ="styles.container">
+
+    <button className={styles.button}>DISPLAY SELLERS</button>
+    <br></br>
+
+
     
-}, []);
+      {posts.map((post) => (
 
+        <div classname={styles.buyerBox} key={post.sellerID}>
+          <p>{`Seller ID: ${post.sellerID}`}</p>
+          <p>{`First Name: ${post.firstname}`}</p>
+          <p>{`Surname: ${post.surname}`}</p>
+          <p>{`Email: ${post.email}`}</p>
+          <p>{`Telephone: ${post.telephone}`}</p>
+          <br></br>
+        </div>
 
-return(
-    <div className='SellerDisplay'>
-
-        <button className='sButton'>DISPLAY SELLERS</button>
-        <br></br>
-
-        {
-            SELLERO.map(record => {
-                return(
-                    <div className="container">
-                        <p>{`Seller ID: ${record.sellerID}`}</p>
-                        <p>{`First name: ${record.firstname}`}</p>
-                        <p>{`Surname: ${record.surname}`}</p>
-                        <p>{`Email: ${record.email}`}</p>
-                        <p>{`Telephone: ${record.telephone}`}</p>
-
-                    </div>
-                )
-            })
-
-        }
-
+      ))}
     </div>
-)
-}
+  );
+};
 
-export default SellerDisplay;
+export default App;
