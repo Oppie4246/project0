@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BuyerList from "./BuyerList";
-import "./Buyer.css";
+import "../styles/Buyer.css";
 
 const Buyer = () => {
      return (
