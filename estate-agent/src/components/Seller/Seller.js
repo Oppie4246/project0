@@ -1,14 +1,15 @@
 import React, {useState, useReducer, useEffect} from "react";
+import { Link } from "react-router-dom";
 import SellerList from "./SellerList";
 import "./Seller.css";
-import {Link, NavLink} from "react-router-dom";
 
-export default ()=> {
+const Seller = () => {
     return (
-        <div>
-            <h1>Seller</h1>
+       <div>
+        <h1>Looking to sell property?</h1>           
+           <Link to="/sellerForm" ><h1>New Seller Registration</h1></Link>
+       </div>
+   );
+};
 
-            <Link to ="/SellerForm" className="title" >Seller Form</Link>
-        </div>
-    )
-}
+export default Seller;

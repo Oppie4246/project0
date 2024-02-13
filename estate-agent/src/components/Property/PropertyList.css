@@ -12,8 +12,10 @@
 .propertyListing > table td {
     padding: 20px;
     vertical-align: top;
+    text-align: left;
 }
 
-.propertyListing > h3{
+.propertyListing > h3 {
     margin-bottom: 0px;
+    text-align: left;
 }
