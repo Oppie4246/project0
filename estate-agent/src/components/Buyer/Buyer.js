@@ -1,8 +1,7 @@
-import React, {useState, useReducer, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import BuyerForm from "./BuyerForm";
+import BuyerList from "./BuyerList";
 import "./Buyer.css";
-
 
 
 
@@ -29,4 +28,4 @@ const Buyer = () => {
     );
 };
 
-export default Buyer;
+export default Buyer();

@@ -1,32 +1,34 @@
-import React, {useState, useReducer, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./Buyer.css";
+import './Buyer.css';
 
-const BuyerList = () => {
-       
+function BuyerList(props) {
+
     return (
-        <div>
-            <table name="buyerList" legend="Current Buyers">
-                 <tr>
-                     <th>First Name</th>
-                     <th>Surname</th>
-                     <th>Email</th>
-                     <th>Phone</th>
-                 </tr>
+        <div className="buyerList">
+            <table>    
                 <tr>
-                     <td>{'firstName'}</td>
-                     <td>{'surname'}</td>
-                     <td>{'email'}</td>
-                     <td>{'phone'}</td>
-                 </tr>
-             </table>
-         
-            <br></br>
-            <Link to="/buyerForm" >Register Buyer</Link>
-            <br></br>
-            <Link to="/" >Home</Link>
-        </div>
-    );
-};
+                    <td>
+                        <h3>Buyer: </h3>
+                        <p>{props.buyer.buyerId}</p>
+                        <h3>First Name: </h3>
+                        <p>{props.buyer.firstName}</p>
+                        <h3>Surname: </h3>
+                        <p>{props.buyer.surname}</p>
+                        <h3>Email: </h3>
+                        <p>{props.buyer.email}</p>
+                        <h3>Telephone: </h3>
+                        <p>{props.buyer.phone}</p>
+                    </td>
+                <tr/>
+                    <td>
+                        <p>{props.buyer.details}</p>
+                    </td>
+                </tr>
+            </table>
+            <h3><Link to="/buyer"><button>Edit Buyer {props.buyer.buyerId}</button></Link></h3>
+        </div>     
+    )
+}
 
 export default BuyerList;
