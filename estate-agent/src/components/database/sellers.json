@@ -1,38 +1,39 @@
-[
-    {
-        "sellerID"   : "1",
-        "firstname" : "Brook",
-        "surname" : "Sella",
-        "email" : "brooksella@sohu.com",
-        "telephone": "+63 791 675 2104"
-    },
-    {
-        "sellerID"   : "2",
-        "firstname" : "Franky",
-        "surname" : "Sailor",
-        "email" : "frankysailor@51.la",
-        "telephone": "+63 739 292 8888"
-    },
-    {
-        "sellerID"   : "3",
-        "firstname" : "Kaido",
-        "surname" : "Dragon",
-        "email" : "dragonkaido@gmail.com",
-        "telephone": "+63 791 678 5252"
-    },
-    {
-        "sellerID"   : "4",
-        "firstname" : "Jinbei",
-        "surname" : "Sea",
-        "email" : "warriorofthesea@gmail.com",
-        "telephone": "+63 791 878 9999"
-    },
-    {
-        "sellerID"   : "5",
-        "firstname" : "Ace",
-        "surname" : "Firefist",
-        "email" : "holeinside@hotmail.com",
-        "telephone": "+63 791 111 2332"
-    }
-
-]
+{
+    "seller": [
+        {
+            "sellerID": "1",
+            "firstname": "Brook",
+            "surname": "Sella",
+            "email": "brooksella@sohu.com",
+            "telephone": "+63 791 675 2104"
+        },
+        {
+            "sellerID": "2",
+            "firstname": "Franky",
+            "surname": "Sailor",
+            "email": "frankysailor@51.la",
+            "telephone": "+63 739 292 8888"
+        },
+        {
+            "sellerID": "3",
+            "firstname": "Kaido",
+            "surname": "Dragon",
+            "email": "dragonkaido@gmail.com",
+            "telephone": "+63 791 678 5252"
+        },
+        {
+            "sellerID": "4",
+            "firstname": "Jinbei",
+            "surname": "Sea",
+            "email": "warriorofthesea@gmail.com",
+            "telephone": "+63 791 878 9999"
+        },
+        {
+            "sellerID": "5",
+            "firstname": "Ace",
+            "surname": "Firefist",
+            "email": "holeinside@hotmail.com",
+            "telephone": "+63 791 111 2332"
+        }
+    ]
+}
