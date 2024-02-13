@@ -2,13 +2,22 @@ import React, { useState, useEffect } from "react";
 
 
 
+// function to update existing buyer - need to be able to get buyer by ID display the details then get new input from user into newData:
 
+// const [newData, editForm] = useState({});
 
-
-
-
-
-
+// function editBuyer (e) {
+//   fetch("http://localhost:8000/buyers", {
+//     method: "PATCH",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(newData),
+//   })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error(error));
+// }
 
 
 
@@ -43,6 +52,9 @@ const App = () => {
           <p>{`Surname: ${post.surname}`}</p>
           <p>{`Email: ${post.email}`}</p>
           <p>{`Telephone: ${post.telephone}`}</p>
+          <br></br>
+          <input onInput={e=>setForm({...newData, firstname: e.target.value})}/>
+          {/* <button onClick={editBuyer()}>Edit</button> */}
           <br></br>
         </div>
 
