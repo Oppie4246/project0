@@ -3,7 +3,8 @@
 .App {
   text-align: center;
   background: linear-gradient(#d3bfae, #d1996b);
-  height: 200vh;
+
+  height: 300vh;
 }
 
 .App-logo {
