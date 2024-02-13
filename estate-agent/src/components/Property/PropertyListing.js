@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 function PropertyListing(props) {
 
     return (
-        <div class="propertyListing">
-            <h3>{props.property.address1}, {props.property.city}, {props.property.county}, {props.property.postcode} - {props.property.price} <Link to="/sellaproperty/confirm"><button>Edit</button></Link></h3> 
+        <div className="propertyListing">
+            <h3>
+                <span>{props.property.address1}, {props.property.city}, {props.property.county}, {props.property.postcode} - £{props.property.price} - {props.property.status.toUpperCase()}</span> 
+                <span>
+                    <Link to="/sellaproperty/confirm"><button id="edit">Edit</button></Link>
+                </span>
+            </h3> 
             <table>    
                 <tr>
                     <td>
-                        <img class="leadImage" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
+                        <img className="leadImage" src={props.property.image} alt="Main image" />
                     </td>
                     <td>
                         <h3>Property Type </h3>

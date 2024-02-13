@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import "../styles/SellerPropertyForm.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
-
-//a form to register a property
-// The SellerProperty components is where new propperties can be added using the 
-// SellerPropertyForm subcomponent.  A property is always to a seller.  This component 
-// also allows the the updating a property status.  Updating property status to SOLD will 
-// also requires a Buyer information which provided via the BuyerSelector subcomponent 
-// which is implemented as a modal list.
 
 export default ()=> {
 
     let [data, setData] = useState({});
+
+    const elements = Array.from(document.querySelectorAll('input[type="checkbox"]'))
+
+    function log() {
+        console.log(elements);
+    }
 
     function submitData() {
         for(let key in data) {
@@ -23,9 +20,10 @@ export default ()=> {
 
     return (
         <div id="body">
+            <button onClick={e=>log()}>Click me</button>
             <h1>Sell a Property</h1>
                 <h3>Property Type</h3>
-                <select onInput={e=>setData({...data, "type": e.target.value})} value={sessionStorage.getItem("type")}>
+                <select onInput={e=>setData({...data, "type": e.target.value})} >
                     <option>Detatched</option>
                     <option>Semi-Detatched</option>
                     <option>Terraced</option>
@@ -48,7 +46,7 @@ export default ()=> {
                 <h3>Price: </h3>
                 £ <input onInput={e=>setData({...data, "price": e.target.value})} value={sessionStorage.getItem("price")} />
                 <h3>Address: </h3>
-                <table>
+                <table><tbody>
                     <tr>
                         <td>Address Line 1: 
                         </td><input onInput={e=>setData({...data, "address1": e.target.value})} value={sessionStorage.getItem("address1")}/><br/>
@@ -69,7 +67,7 @@ export default ()=> {
                         <td>Postcode: 
                         </td><input onInput={e=>setData({...data, "postcode": e.target.value})} value={sessionStorage.getItem("postcode")}/><br/>
                     </tr>
-                </table>
+                </tbody></table>
                 <h3>Photos: </h3>
                 <input id="img" type="file" />
                 <h3>Property Description: </h3>
