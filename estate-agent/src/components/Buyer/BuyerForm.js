@@ -13,8 +13,6 @@ const BuyerForm = () => {
     
     function submitForm(e){
         e.preventDefault();
-        
-
          
             fetch("http://localhost:8000/buyers", {
                 method: "POST",
