@@ -1,0 +1,88 @@
+{
+    "buyers": [
+        {
+            "buyerID": "1",
+            "firstname": "Luffy",
+            "surname": "taro",
+            "email": "atuny0@sohu.com",
+            "telephone": "+63 791 675 8914",
+            "id": "eb91"
+        },
+        {
+            "buyerID": "2",
+            "firstname": "Terrill",
+            "surname": "Hills",
+            "email": "rshawe2@51.la",
+            "telephone": "+63 739 292 7942",
+            "id": "b7b1"
+        },
+        {
+            "buyerID": "3",
+            "firstname": "Zoro",
+            "surname": "Sword",
+            "email": "zoroenma@gmail.com",
+            "telephone": "+63 791 525 8591",
+            "id": "5bca"
+        },
+        {
+            "buyerID": "4",
+            "firstname": "Sanji",
+            "surname": "Soba",
+            "email": "sobacook5@gmail.com",
+            "telephone": "+63 791 878 8540",
+            "id": "4942"
+        },
+        {
+            "buyerID": "5",
+            "firstname": "Nami",
+            "surname": "Zeus",
+            "email": "ZeusCloud@hotmail.com",
+            "telephone": "+63 791 111 2222",
+            "id": "56dc"
+        },
+        {
+            "id": "90ce",
+            "firstname": "this",
+            "surname": "new",
+            "email": "details@new.com",
+            "telephone": "123456"
+        }
+    ],
+    "sellers": [
+        {
+            "sellerID": "1",
+            "firstname": "Brook",
+            "surname": "Sella",
+            "email": "brooksella@sohu.com",
+            "telephone": "+63 791 675 2104"
+        },
+        {
+            "sellerID": "2",
+            "firstname": "Franky",
+            "surname": "Sailor",
+            "email": "frankysailor@51.la",
+            "telephone": "+63 739 292 8888"
+        },
+        {
+            "sellerID": "3",
+            "firstname": "Kaido",
+            "surname": "Dragon",
+            "email": "dragonkaido@gmail.com",
+            "telephone": "+63 791 678 5252"
+        },
+        {
+            "sellerID": "4",
+            "firstname": "Jinbei",
+            "surname": "Sea",
+            "email": "warriorofthesea@gmail.com",
+            "telephone": "+63 791 878 9999"
+        },
+        {
+            "sellerID": "5",
+            "firstname": "Ace",
+            "surname": "Firefist",
+            "email": "holeinside@hotmail.com",
+            "telephone": "+63 791 111 2332"
+        }
+    ]
+}
