@@ -13,25 +13,10 @@ const BuyerForm = () => {
     
     function submitForm(e){
         e.preventDefault();
-        console.log(formData);
-                
-    //     fetch('https://www.nextpoint.co.uk/test.php'), {
-    //         method: 'POST',
-    //         credentials: "include",
-    //         headers: {
-    //             'Accept': 'application/json, text/plain, */*',
-    //             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    //         },
-    //         body: JSON.stringify({formData})
-    //     }
-    //     .then(res=> res.json())
-    //     .then(res=> console.log(content));
-    //     };
-          
-
-    //     for(let key in formData) {
-    //         sessionStorage.setItem(key, formData[key])
-    //     };
+        for(let key in formData) {
+            sessionStorage.setItem(key, formData[key])
+        };
+        sessionStorage.setItem('sellerId', 1);
     };
 
     return (
