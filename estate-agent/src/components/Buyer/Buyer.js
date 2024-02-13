@@ -15,15 +15,6 @@ const Buyer = () => {
             <br></br>
             <Link to="/buyerForm" >Register New Buyer</Link>
 
-
-
-
-
-
-
-
-
-
         </div>
     );
 };
