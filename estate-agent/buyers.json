@@ -39,32 +39,6 @@
       "email": "ZeusCloud@hotmail.com",
       "telephone": "+63 791 111 2222",
       "id": "56dc"
-    },
-    {
-      "id": "90ce",
-      "firstname": "this",
-      "surname": "new",
-      "email": "details@new.com",
-      "telephone": "123456"
-    },
-    {
-      "id": "4e98",
-      "firstname": "Neil",
-      "surname": "B",
-      "telephone": "01875 123 456"
-    },
-    {
-      "id": "558a",
-      "firstname": "Neil",
-      "surname": "B",
-      "telephone": "01875 123 456"
-    },
-    {
-      "id": "ece5",
-      "firstname": "1",
-      "surname": "2",
-      "email": "3",
-      "telephone": "4"
-    }
+    }   
   ]
 }

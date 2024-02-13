@@ -34,20 +34,6 @@
       "surname": "Firefist",
       "email": "holeinside@hotmail.com",
       "telephone": "+63 791 111 2332"
-    },
-    {
-      "id": "f675",
-      "firstName": "1",
-      "surname": "2",
-      "email": "3",
-      "phone": "4"
-    },
-    {
-      "id": "58e3",
-      "firstName": "Alan",
-      "surname": "Turing",
-      "email": "alanturing@gmail.com",
-      "phone": "01875 123 456"
-    }
+    }    
   ]
 }
