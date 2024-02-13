@@ -22,7 +22,7 @@ export const Nav = () => {
             <span></span>
         </div>
         
-        <img src="" alt="" />
+        
         <ul className={menuOpen ? "open" : ""}>
             <li>
                 <NavLink to="/about">About</NavLink>

@@ -33,6 +33,13 @@ import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
 import Person from "./components/Person/Person";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 
+
+import BuyerDisplay from "./components/Buyer/BuyerDisplay"
+
+
+
+
+
 function App() {
   return (
 
@@ -62,6 +69,11 @@ function App() {
         <Route path="/sellerLiist" element={<SellerList />} />
         <Route path="/person" element={<Person />} />
       </Routes>
+
+          <Route path="/BuyerDisplay" element={<BuyerDisplay/>} />
+
+        </Routes>
+        
 
     </div>
   );

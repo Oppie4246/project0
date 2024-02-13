@@ -1,0 +1,33 @@
+[
+    {
+        "firstname" : "Luffy",
+        "surname" : "taro",
+        "email" : "atuny0@sohu.com",
+        "telephone": "+63 791 675 8914"
+    },
+    {
+        "firstname" : "Terrill",
+        "surname" : "Hills",
+        "email" : "rshawe2@51.la",
+        "telephone": "+63 739 292 7942"
+    },
+    {
+        "firstname" : "Zoro",
+        "surname" : "Sword",
+        "email" : "zoroenma@gmail.com",
+        "telephone": "+63 791 525 8591"
+    },
+    {
+        "firstname" : "Sanji",
+        "surname" : "Soba",
+        "email" : "sobacook5@gmail.com",
+        "telephone": "+63 791 878 8540"
+    },
+    {
+        "firstname" : "Nami",
+        "surname" : "Zeus",
+        "email" : "ZeusCloud@hotmail.com",
+        "telephone": "+63 791 111 2222"
+    }
+
+]

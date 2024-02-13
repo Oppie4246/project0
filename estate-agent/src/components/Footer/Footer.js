@@ -15,7 +15,7 @@ export const Footer = () => {
     <footer>
 
         <Link to ="/" className="title" >QA ESTATES</Link>
-
+        
         <ul className={menuOpen ? "open" : ""}>
             <li>
                 <NavLink to="/about">About</NavLink>
