@@ -1,5 +1,5 @@
 import React from "react";
-import "./SellerList.css";
+import "../styles/SellerList.css";
 
 export default ()=> {
     return (

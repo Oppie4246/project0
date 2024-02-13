@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './BuyerForm.css';
+import '../styles/BuyerForm.css';
 import { Link, useEffect } from 'react-router-dom';
 
 import profile from '../../assets/profile.png'
@@ -13,27 +13,24 @@ const BuyerForm = () => {
     
     function submitForm(e){
         e.preventDefault();
-        console.log(formData);
-                
-    //     fetch('https://www.nextpoint.co.uk/test.php'), {
-    //         method: 'POST',
-    //         credentials: "include",
-    //         headers: {
-    //             'Accept': 'application/json, text/plain, */*',
-    //             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-    //         },
-    //         body: JSON.stringify({formData})
-    //     }
-    //     .then(res=> res.json())
-    //     .then(res=> console.log(content));
-    //     };
+         
+            fetch("http://localhost:8000/buyers", {
+                method: "POST",
+                headers: {
+                    "content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
           
-
-    //     for(let key in formData) {
-    //         sessionStorage.setItem(key, formData[key])
-    //     };
+            
+        for(let key in formData) {
+            sessionStorage.setItem(key, formData[key])
+        };
     };
-
+    
     return (
         <div className='container'>
             <div className='header'>
@@ -43,7 +40,7 @@ const BuyerForm = () => {
             <div className='inputs'>
                 <div className='input'>
                     <img src={profile} alt='silhouette icon image of a person' />
-                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onInput={e=>setForm({...formData, firstName: e.target.value})} />
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onInput={e=>setForm({...formData, firstname: e.target.value})} />
                 </div>
                 <div className='input'>
                     <img src={profile} alt='silhouette icon image of a person' />
@@ -55,11 +52,11 @@ const BuyerForm = () => {
                 </div>
                 <div className='input'>
                     <img src={phone} alt='silhouette icon image of an old typical phone' />
-                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, phone: e.target.value, buyerId: 1})} />
+                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, telephone: e.target.value})} />
                 </div>
             </div>
             <div className='submitContainer'>
-                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyer">Register Buyer</Link></div>
+                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyerDisplay2">Register Buyer</Link></div>
             </div>
         </div>
     );

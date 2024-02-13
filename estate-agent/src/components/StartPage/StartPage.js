@@ -1,5 +1,5 @@
 import React from "react";
-import "./StartPage.css";
+import "../styles/StartPage.css";
 
 export default ()=> {
     return (
