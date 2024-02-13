@@ -12,16 +12,16 @@ import BUYERO from '../database/buyers.json'
 
 function BuyerDisplay(){
 
-    // const [buyers, setBuyers] =useState([]);
+     const [buyers, setBuyers] =useState([]);
 
 
-    // useEffect(() => {
+     useEffect(() => {
 
-    //     Axios.get("../database/buyers.json").then((res) => {
-    //         setBuyers(res.data);
-    //     }); 
+         Axios.get("../database/buyers.json").then((res) => {
+             setBuyers(res.data);
+         }); 
 
-    // }, []);
+     }, []);
 
     
 

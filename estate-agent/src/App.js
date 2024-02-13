@@ -68,7 +68,7 @@ function App() {
         <Route path="/seller" element={<Seller />} />
         <Route path="/sellerLiist" element={<SellerList />} />
         <Route path="/person" element={<Person />} />
-      </Routes>
+      
 
           <Route path="/BuyerDisplay" element={<BuyerDisplay/>} />
 
