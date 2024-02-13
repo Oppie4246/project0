@@ -1,4 +1,4 @@
-import React, {useState, useReducer, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import SellerList from "./SellerList";
 import "./Seller.css";
