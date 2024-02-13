@@ -13,12 +13,26 @@ const BuyerForm = () => {
     
     function submitForm(e){
         e.preventDefault();
+        
+
+         
+            fetch("http://localhost:8000/buyers", {
+                method: "POST",
+                headers: {
+                    "content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+          
+            
         for(let key in formData) {
             sessionStorage.setItem(key, formData[key])
         };
-        sessionStorage.setItem('sellerId', 1);
     };
-
+    
     return (
         <div className='container'>
             <div className='header'>
@@ -28,7 +42,7 @@ const BuyerForm = () => {
             <div className='inputs'>
                 <div className='input'>
                     <img src={profile} alt='silhouette icon image of a person' />
-                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onInput={e=>setForm({...formData, firstName: e.target.value})} />
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" onInput={e=>setForm({...formData, firstname: e.target.value})} />
                 </div>
                 <div className='input'>
                     <img src={profile} alt='silhouette icon image of a person' />
@@ -40,11 +54,11 @@ const BuyerForm = () => {
                 </div>
                 <div className='input'>
                     <img src={phone} alt='silhouette icon image of an old typical phone' />
-                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, phone: e.target.value, buyerId: 1})} />
+                    <input type="tel" id="phone" name="phone" placeholder="Telephone Number" onInput={e=>setForm({...formData, telephone: e.target.value})} />
                 </div>
             </div>
             <div className='submitContainer'>
-                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyer">Register Buyer</Link></div>
+                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/buyerDisplay2">Register Buyer</Link></div>
             </div>
         </div>
     );

@@ -38,7 +38,7 @@ const App = () => {
       {posts.map((post) => (
 
         <div key={post.buyerID}>
-          <p>{`Buyer ID: ${post.buyerID}`}</p>
+          <p>{`Buyer ID: ${post.id}`}</p>
           <p>{`First Name: ${post.firstname}`}</p>
           <p>{`Surname: ${post.surname}`}</p>
           <p>{`Email: ${post.email}`}</p>
