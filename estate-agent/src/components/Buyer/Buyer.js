@@ -1,22 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BuyerList from "./BuyerList";
-import "./Buyer.css";
-
-
-
-
-
+import "../styles/Buyer.css";
 
 const Buyer = () => {
      return (
         <div>
-            <h1>JSON SERVER</h1>
-            <br></br>
-            <Link to="/buyerForm" >Register New Buyer</Link>
-
+            <h1>Looking to buy property?</h1>         
+            <Link to="/buyerForm" ><h1>New Buyer Registration</h1></Link>
         </div>
     );
 };
 
-export default Buyer();
+export default Buyer;

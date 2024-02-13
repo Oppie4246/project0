@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './SellerForm.css';
+import '../styles/SellerForm.css';
 import { Link, useEffect } from 'react-router-dom';
 
 import profile from '../../assets/profile.png';

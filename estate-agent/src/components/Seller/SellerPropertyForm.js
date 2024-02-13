@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SellerPropertyForm.css";
+import "../styles/SellerPropertyForm.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 

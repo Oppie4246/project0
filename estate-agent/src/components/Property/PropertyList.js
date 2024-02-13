@@ -1,5 +1,5 @@
 import React from "react";
-import "./PropertyList.css";
+import "../styles/PropertyList.css";
 import PropertyListing from "./PropertyListing";
 import { Link } from "react-router-dom";
 
