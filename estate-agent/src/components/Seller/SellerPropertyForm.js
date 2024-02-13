@@ -16,9 +16,15 @@ export default ()=> {
             <h1>Sell a Property</h1>
             <form>
                 <h3>Property Type</h3>
+<<<<<<< Updated upstream
                 <select>
                     <option>Detatched</option>
                     <option>Semi-Detatched</option>
+=======
+                <select onInput={e=>setData({...data, "type": e.target.value})} value={sessionStorage.getItem("type")}>
+                    <option>Detached</option>
+                    <option>Semi-Detached</option>
+>>>>>>> Stashed changes
                     <option>Terraced</option>
                     <option>Flat</option>
                     <option>Bungalow</option>
