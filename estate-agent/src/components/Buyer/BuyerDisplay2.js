@@ -53,7 +53,7 @@ const App = () => {
           <p>{`Email: ${post.email}`}</p>
           <p>{`Telephone: ${post.telephone}`}</p>
           <br></br>
-          <input onInput={e=>setForm({...newData, firstname: e.target.value})}/>
+          {/* <input onInput={e=>setForm({...newData, firstname: e.target.value})}/> */}
           {/* <button onClick={editBuyer()}>Edit</button> */}
           <br></br>
         </div>
