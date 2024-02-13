@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import './App.css';
+import './components/styles/App.css';
 
 // Start Page of Website
 import StartPage from "./components/StartPage/StartPage";

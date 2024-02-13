@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Link from "react-router-dom";
-import "./SellerDisplay.css"
+import "../styles/SellerDisplay.css"
 
 import Axios from "axios";
 import SELLERO from "../database/sellers.json"

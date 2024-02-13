@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Buyer.css';
+import '../styles/Buyer.css';
 
 function BuyerList(props) {
 
