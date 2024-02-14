@@ -2,9 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import './components/styles/App.css';
 
-// Start Page of Website
-//import StartPage from "./components/StartPage/StartPage";
-
 // Feature: Register Seller
 import Seller from "./components/Seller/Seller";
 import SellerList from "./components/Seller/SellerList";
