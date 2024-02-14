@@ -2,9 +2,7 @@ import React from "react";
 import "../styles/PropertyList.css";
 import PropertyListing from "./PropertyListing";
 import { useState } from "react";
-import image1 from '../../assets/image1.jpeg'
-import bedroom1 from '../../assets/bedroom1.jpeg'
-import gym from '../../assets/gym.jpeg'
+import { Link } from "react-router-dom";
 
 
 export default ()=> {
@@ -66,7 +64,7 @@ export default ()=> {
     return (
         <div id="body">
             <h1>Properties </h1>
-            <p><button> Add New Property</button></p>
+            <p><Link to='/sellaproperty'><button>Add New Property</button></Link></p>
             <div onInput={e=>setInput(e)}>
                 <strong>Filter by: </strong>
                 <select name="status" id="status">
