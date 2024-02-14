@@ -46,14 +46,7 @@
       "surname": "Brown",
       "email": "Leon@hello.com",
       "telephone": "123545"
-    },
-    {
-      "id": "a1e0",
-      "firstname": "Firstname Test Buyer 1",
-      "surname": "Surname Test Buyer 1",
-      "email": "Email Test Buyer 1",
-      "telephone": "Telephone Test Buyer 1"
-    }
+    }    
   ],
   "properties": [
     {
@@ -139,38 +132,24 @@
       "email": "holeinside@hotmail.com",
       "telephone": "+63 791 111 2332",
       "id": "af18"
-    },
-    {
-      "id": "ea74",
-      "firstName": "1",
-      "surname": "2",
-      "email": "3",
-      "phone": "4"
     }
+    
   ],
   "users": [
     {
-      "email": "admin",
-      "password": "password",
+      "email": "admin1",
+      "password": "password1",
       "id": "e268"
     },
     {
-      "id": "9487",
-      "name": "hello",
-      "email": "new@new.com",
-      "password": "1234ttt"
+      "email": "admin2",     
+      "password": "password2",
+      "id": "e270"
     },
     {
-      "id": "81af",
-      "name": "132",
-      "email": "132@email.com",
-      "password": "132pass"
-    },
-    {
-      "id": "52a2",
-      "name": "A",
-      "email": "Name@g.com",
-      "password": "B"
+      "email": "admin3",     
+      "password": "password3",
+      "id": "e280"
     }
   ]
 }
