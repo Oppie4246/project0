@@ -8,7 +8,7 @@ const Seller = () => {
        <div>
         <h1>Looking to sell property?</h1>           
            <Link to="/sellerForm" ><h1>New Seller Registration</h1></Link>
-           <Link to="/sellerdisplay" ><h1>New Seller Registration</h1></Link>
+           <Link to="/sellerdisplay" ><h1>Display Sellers</h1></Link>
        </div>
    );
 };
