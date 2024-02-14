@@ -70,11 +70,11 @@ function App() {
         <Route path="/sellerLiist" element={<SellerList />} />        
       
 
-        {/* <Route path="/BuyerDisplay" element={<BuyerDisplay/>} /> */}
+        <Route path="/BuyerDisplay" element={<BuyerDisplay/>} />
         <Route path="/SellerDisplay" element={<SellerDisplay/>} />
 
 
-        <Route path="/BuyerDisplay2" element={<BuyerDisplay2/>} />
+        
 
         </Routes>
         
