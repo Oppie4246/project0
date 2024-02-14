@@ -56,7 +56,7 @@ const SellerForm = () => {
                 </div>
             </div>
             <div className='submitContainer'>
-                <div onClick={e=>submitForm(e)} className='submit'><Link className="link" to="/SellerList">Register Seller</Link></div>
+                <buttonLink onClick={e=>submitForm(e)} ><Link className="link" to="/seller">REGISTER</Link></buttonLink>
             </div>
         </div>
     );

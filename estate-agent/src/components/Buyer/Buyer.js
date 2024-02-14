@@ -6,7 +6,7 @@ import styles from "../styles/BuyerDisplay.module.css"
 
 const Buyer = () => {
 
-    function ButtonLink({to, children}){
+    function Button({to, children}){
         return <Link to={to}><button>{children}</button></Link>;
     }
 
@@ -43,8 +43,8 @@ const Buyer = () => {
      return (
         
         <div>
-            <h1>BUYERS</h1>         
-            <ButtonLink class={ButtonLink} to ="/buyerform">REGISTER BUYER</ButtonLink>
+                  
+            <Button className={styles.button} to ="/buyerform">REGISTER BUYER</Button>
             
             
         <div className="styles.container">
@@ -56,11 +56,13 @@ const Buyer = () => {
         {displayBuyers && posts.map((post) => (
 
             <div className={styles.buyerBox} key={post.buyerID}>
-            <p>{`Buyer ID: ${post.buyerID}`}</p>
+
+            <p>{`Buyer ID: ${post.id}`}</p>
             <p>{`First Name: ${post.firstname}`}</p>
             <p>{`Surname: ${post.surname}`}</p>
             <p>{`Email: ${post.email}`}</p>
             <p>{`Telephone: ${post.telephone}`}</p>
+            
             <br></br>
             </div>
         

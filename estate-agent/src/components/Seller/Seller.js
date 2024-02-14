@@ -21,7 +21,7 @@ const Seller = () => {
             redirect: "follow",
           };
       
-          fetch("http://localhost:8001/sellers", requestOptions)
+          fetch("http://localhost:8000/sellers", requestOptions)
             .then((response) => response.json())
             .then((result) => setPosts(result))
             .catch((error) => console.log("error", error));
@@ -41,9 +41,9 @@ const Seller = () => {
 
     return (
        <div>
-        <h1>SELLERS</h1>       
+           
 
-        <ButtonLink class={ButtonLink} to ="/sellerForm">Register Seller</ButtonLink>    
+        <ButtonLink class={ButtonLink} to ="/sellerForm">REGISTER SELLER</ButtonLink>    
         
            
 
