@@ -16,7 +16,7 @@ const LoginSignup = () => {
         delete formData[Object.keys(formData)[0]];        
         console.log(formData);
         //code to check if email and password match users fetch email and password
-        navigate('/About');
+        navigate('/properties');
 
     }
 
