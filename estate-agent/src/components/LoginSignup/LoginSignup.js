@@ -15,8 +15,24 @@ const LoginSignup = () => {
         e.preventDefault();
         delete formData[Object.keys(formData)[0]];        
         console.log(formData);
-        //code to check if email and password match users fetch email and password
-        navigate('/About');
+        fetch("http://localhost:8000/users"+ formData[Object.keys(formData)[0]])
+            .then((res)=>{res.json();})
+            .then((res)=>{
+                if (Object.keys(res).length=== 0){
+                    console.log('Please enter valid username');
+                }else{
+                    if(res.email === email) {
+                        sessionStorage.setItem('username', email);
+                        navigate('/properties');
+                    } else{
+                        console.log('Please enter valid credentials');
+                    }
+                }
+            })
+            .catch ((error)=>{
+                    console.log('Login Failed due to: ' + error.message);
+                });     
+        navigate('/properties');
 
     }
 

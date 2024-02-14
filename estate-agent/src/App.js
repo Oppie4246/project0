@@ -1,9 +1,6 @@
 import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import './components/styles/App.css';
-
-// Start Page of Website
-import StartPage from "./components/StartPage/StartPage";
 
 // Feature: Register Seller
 import Seller from "./components/Seller/Seller";
@@ -24,21 +21,14 @@ import BuyerList from "./components/Buyer/BuyerList";
 // Feature: Import Nav
 import { Nav } from "./components/Nav/Nav";
 
-//About Section
-import About from "./components/About/About";
-
-
 //Upload and confirm a property
 import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
 
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 
-
+// Displays the new buyers/sellers
 import BuyerDisplay from "./components/Buyer/BuyerDisplay"
 import SellerDisplay from "./components/Seller/SellerDisplay"
-
-
-
 
 
 function App() {
@@ -48,18 +38,14 @@ function App() {
 
       <Nav />
       <Routes>
-        <Route path="/" element={<LoginSignup />} />
-
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<LoginSignup />} />       
         <Route path="/properties" element={<PropertyList />} />
         <Route path="/sellaproperty" element={<SellerPropertyForm />} />
         <Route path="/sellaproperty/confirm" element={<ConfirmListing />} />
         <Route path="/property" element={<Property />} />
         <Route path="/Buyer" element={<Buyer />} />
-
         <Route path="/Seller" element={<Seller />} />
         <Route path="/SellerForm" element={<SellerForm />} />
-
         <Route path="sellproperty" element={<SellerPropertyFrom />} />
         <Route path="sellproperty/confirm" element={<ConfirmListing />} />
         <Route path="/property" element={<Property />} />
@@ -67,18 +53,10 @@ function App() {
         <Route path="/buyerForm" element={<BuyerForm />} />
         <Route path="/buyerList" element={<BuyerList />} />
         <Route path="/seller" element={<Seller />} />
-        <Route path="/sellerLiist" element={<SellerList />} />        
-      
-
+        <Route path="/sellerLiist" element={<SellerList />} />
         <Route path="/BuyerDisplay" element={<BuyerDisplay/>} />
         <Route path="/SellerDisplay" element={<SellerDisplay/>} />
-
-
-        
-
         </Routes>
-        
-
     </div>
   );
 }

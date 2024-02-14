@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 
 import styles from "../styles/SellerDisplay.module.css"
@@ -13,7 +13,7 @@ const App = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8001/sellers", requestOptions)
+    fetch("http://localhost:8000/sellers", requestOptions)
       .then((response) => response.json())
       .then((result) => setPosts(result))
       .catch((error) => console.log("error", error));
