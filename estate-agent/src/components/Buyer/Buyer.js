@@ -8,6 +8,7 @@ const Buyer = () => {
         <div>
             <h1>Looking to buy property?</h1>         
             <Link to="/buyerForm" ><h1>New Buyer Registration</h1></Link>
+            <Link to="/buyerDisplay" ><h1>Display Buyers</h1></Link>
         </div>
     );
 };
