@@ -32,6 +32,7 @@ const LoginSignup = () => {
             .catch ((error)=>{
                     console.log('Login Failed due to: ' + error.message);
                 });     
+        navigate('/properties');
 
     }
 
