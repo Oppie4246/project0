@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/BuyerForm.css';
-import { Link, useEffect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import profile from '../../assets/profile.png'
 import phone from '../../assets//phone.png';

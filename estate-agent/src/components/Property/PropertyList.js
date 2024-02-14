@@ -2,9 +2,9 @@ import React from "react";
 import "../styles/PropertyList.css";
 import PropertyListing from "./PropertyListing";
 import { useState } from "react";
-import image1 from '../../assets/image1.jpeg'
-import bedroom1 from '../../assets/bedroom1.jpeg'
-import gym from '../../assets/gym.jpeg'
+// import image1 from '../../assets/image1.jpeg'
+// import bedroom1 from '../../assets/bedroom1.jpeg'
+// import gym from '../../assets/gym.jpeg'
 
 
 export default ()=> {

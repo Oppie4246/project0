@@ -1,5 +1,5 @@
-import React, {useState, useReducer, useEffect} from "react";
-import PropertyList from "./PropertyList";
+import React from "react";
+// import PropertyList from "./PropertyList";
 import "../styles/Property.css";
 
 export default () => {

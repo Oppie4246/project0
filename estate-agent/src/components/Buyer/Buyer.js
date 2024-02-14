@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BuyerList from "./BuyerList";
+//import BuyerList from "./BuyerList";
 import "../styles/Buyer.css";
 
 const Buyer = () => {
