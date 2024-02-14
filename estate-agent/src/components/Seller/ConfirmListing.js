@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default ()=> {
 
     return (
-        <div id="body">
+        <div id="confirmProperty">
             <h1>Confirm Property</h1>
             <p>Please edit or confirm the following details:</p>
             <form>
@@ -58,12 +58,14 @@ export default ()=> {
                 <p>{sessionStorage.getItem("details")}</p>
 
                 <div id="images">
-                    <img class="images" src={require('../../assets/image1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('../../assets/bathroom1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('../../assets/bathroom2.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('../../assets/bedroom1.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('../../assets/gym.jpeg')} alt="Bathroom image" />
-                    <img class="images" src={require('../../assets/kitchen.jpeg')} alt="Bathroom image" />
+                    <img class="images" src={sessionStorage.getItem("images0")} />
+                    <img class="images" src={sessionStorage.getItem("images1")} />
+                    <img class="images" src={sessionStorage.getItem("images2")} />
+                    <img class="images" src={sessionStorage.getItem("images3")} />
+                    <img class="images" src={sessionStorage.getItem("images4")} />
+                    <img class="images" src={sessionStorage.getItem("images5")} />
+                    <img class="images" src={sessionStorage.getItem("images6")} />
+                    <img class="images" src={sessionStorage.getItem("images7")} />
                 </div>
                 <button type="submit">Submit</button>
             </form>
