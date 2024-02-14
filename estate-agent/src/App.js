@@ -74,7 +74,7 @@ function App() {
         <Route path="/SellerDisplay" element={<SellerDisplay/>} />
 
 
-        {/* <Route path="/BuyerDisplay2" element={<BuyerDisplay2/>} /> */}
+        
 
         </Routes>
         

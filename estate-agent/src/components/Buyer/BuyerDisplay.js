@@ -1,25 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
-
-// function to update existing buyer - need to be able to get buyer by ID display the details then get new input from user into newData:
-
-// const [newData, editForm] = useState({});
-
-// function editBuyer (e) {
-//   fetch("http://localhost:8000/buyers", {
-//     method: "PATCH",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(newData),
-//   })
-//   .then((response) => response.json())
-//   .then((data) => console.log(data))
-//   .catch((error) => console.error(error));
-// }
-
-
+import styles from "../styles/BuyerDisplay.module.css"
 
 
 
@@ -43,23 +26,27 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="styles.container">
+
+        <button className={styles.button} >DISPLAY BUYERS</button>
+        <br></br>
+
+    
       {posts.map((post) => (
 
-        <div key={post.buyerID}>
-          <p>{`Buyer ID: ${post.id}`}</p>
+        <div className={styles.buyerBox} key={post.buyerID}>
+          <p>{`Buyer ID: ${post.buyerID}`}</p>
           <p>{`First Name: ${post.firstname}`}</p>
           <p>{`Surname: ${post.surname}`}</p>
           <p>{`Email: ${post.email}`}</p>
           <p>{`Telephone: ${post.telephone}`}</p>
           <br></br>
-          {/* <input onInput={e=>setForm({...newData, firstname: e.target.value})}/> */}
-          {/* <button onClick={editBuyer()}>Edit</button> */}
-          <br></br>
         </div>
+    
 
       ))}
     </div>
+    
   );
 };
 
