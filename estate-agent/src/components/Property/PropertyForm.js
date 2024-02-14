@@ -1,18 +1,45 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+//import '../styles/SellerForm.css';
+import { Link, useEffect } from 'react-router-dom';
 
-function PropertyListing(props) {
-    
+import profile from '../../assets/profile.png';
+import phone from '../../assets/phone.png';
+import email from '../../assets/email.png';
+
+
+const PropertyForm = () => {
+
+    const [formData, setForm] = useState({});
+
+    function submitForm(e) {
+        e.preventDefault();
+
+        fetch("http://localhost:8000/properties", {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+
+
+        for (let key in formData) {
+            sessionStorage.setItem(key, formData[key])
+        };
+    };
 
     return (
         <div className="propertyListing">
             <h3>
-                <span>{props.property.address1}, {props.property.city}, {props.property.county}, {props.property.postcode} - £{props.property.price} - {props.property.status.toUpperCase()}</span> 
+                <span>{props.property.address1}, {props.property.city}, {props.property.county}, {props.property.postcode} - £{props.property.price} - {props.property.status.toUpperCase()}</span>
                 <span>
                     <Link to="/sellaproperty/confirm"><button id="edit">Edit</button></Link>
                 </span>
-            </h3> 
-            <table>    
+            </h3>
+            <table>
                 <tr>
                     <td>
                         <img className="leadImage" src={props.property.image} alt="Main image" />
@@ -36,8 +63,8 @@ function PropertyListing(props) {
                     </td>
                 </tr>
             </table>
-        </div>     
+        </div>
     )
 }
 
-export default PropertyListing;
+export default PropertyForm;

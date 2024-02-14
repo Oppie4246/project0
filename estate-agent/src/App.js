@@ -38,8 +38,6 @@ import BuyerDisplay from "./components/Buyer/BuyerDisplay"
 import SellerDisplay from "./components/Seller/SellerDisplay"
 
 
-import BuyerDisplay2 from "./components/Buyer/BuyerDisplay2"
-
 
 
 
@@ -69,8 +67,7 @@ function App() {
         <Route path="/buyerForm" element={<BuyerForm />} />
         <Route path="/buyerList" element={<BuyerList />} />
         <Route path="/seller" element={<Seller />} />
-        <Route path="/sellerLiist" element={<SellerList />} />
-        
+        <Route path="/sellerLiist" element={<SellerList />} />        
       
 
         {/* <Route path="/BuyerDisplay" element={<BuyerDisplay/>} /> */}
