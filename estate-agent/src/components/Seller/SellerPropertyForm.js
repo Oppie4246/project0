@@ -15,9 +15,18 @@ export default ()=> {
     }
 
     const [file, setFile] = useState();
+
+    let images = [];
+
     function handleChange(e) {
-        console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
+        for(let i = 0; i < e.target.files.length; i++) {
+            console.log(e.target.files[i])
+            let toPush = URL.createObjectURL(e.target.files[i]);
+            images.push(toPush)
+            sessionStorage.setItem(`images${i}`, images[i])
+        }
+        
     }
 
     return (
@@ -98,8 +107,15 @@ export default ()=> {
                 </table>
                 <div id="addPhotos">
                     <h3>Photos: </h3>
-                    <img className="imageInput" src={file} /><br />
-                    <input id="img" type="file" onChange={e=>handleChange(e)}/>
+                    <img className="imageInput" src={sessionStorage.getItem("images0")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images1")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images2")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images3")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images4")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images5")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images6")} />
+                    <img className="imageInput" src={sessionStorage.getItem("images7")} /><br />
+                    <input id="img" multiple type="file" onChange={e=>handleChange(e)}/>
                 </div>
             </div>
             <Link to="/sellaproperty/confirm"><button id="sellPropertyButton" onClick={e=>submitData()}>Submit</button></Link>
