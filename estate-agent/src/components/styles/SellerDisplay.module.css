@@ -21,7 +21,7 @@ body{
     background: #d3c8bf;
 }
 
-.buyerBox{
+.sellerBox{
     background-color: antiquewhite;
     border:4px solid #000000;
     padding: 2rem;
@@ -29,7 +29,7 @@ body{
     border-radius: 0.25em;
 }
 
-.buyerBox p{
+.sellerBox p{
     margin:10px 0;
     font-size: 20px;
     font-weight: bold;
@@ -42,6 +42,6 @@ body{
     
 }
 
-.buyerBox:hover{
-    background-color: black;
+.sellerBox:hover{
+    background-color: #a4b2b0;
 }
