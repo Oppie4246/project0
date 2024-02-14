@@ -39,6 +39,21 @@
       "email": "ZeusCloud@hotmail.com",
       "telephone": "+63 791 111 2222",
       "id": "56dc"
-    }   
+    },
+    {
+      "buyerID": "6",
+      "firstname": "Ichigo",
+      "surname": "Kurosaki",
+      "email": "ichigo_soulreaper@gmail.com",
+      "telephone": "+63 791 876 5432",
+      "id": "56dd"
+    },
+    {
+      "buyerID": "7",
+      "firstname": "Sasuke",
+      "surname": "Uchiha",
+      "email": "sasuke_avenger@gmail.com",
+      "telephone": "+63 791 999 0000"
+    }  
   ]
 }

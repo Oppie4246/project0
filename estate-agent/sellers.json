@@ -34,6 +34,43 @@
       "surname": "Firefist",
       "email": "holeinside@hotmail.com",
       "telephone": "+63 791 111 2332"
-    }    
+    },
+    {
+      "sellerID": "6",
+      "firstname": "Naruto",
+      "surname": "Uzumaki",
+      "email": "hokage_naruto@gmail.com",
+      "telephone": "+63 791 555 1234"
+    },
+    {
+      "sellerID": "7",
+      "firstname": "Sakura",
+      "surname": "Haruno",
+      "email": "sakura_cherryblossom@yahoo.com",
+      "telephone": "+63 791 987 6543"
+    },
+    {
+      "sellerID": "8",
+      "firstname": "Luffy",
+      "surname": "Monkey D.",
+      "email": "luffy_strawhat@gmail.com",
+      "telephone": "+63 791 777 8888"
+    },
+    {
+      "sellerID": "9",
+      "firstname": "Vegeta",
+      "surname": "Prince",
+      "email": "vegeta_saiyan@gmail.com",
+      "telephone": "+63 791 321 9876"
+    },
+    {
+      "sellerID": "10",
+      "firstname": "Bulma",
+      "surname": "Briefs",
+      "email": "bulma_inventor@gmail.com",
+      "telephone": "+63 791 444 5678"
+    }
+    
+    
   ]
 }

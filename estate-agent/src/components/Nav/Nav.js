@@ -31,10 +31,10 @@ export const Nav = () => {
                 <NavLink to="/properties">Properties</NavLink>
             </li>
             <li>
-                <NavLink to="/Buyer">Buyer</NavLink>
+                <NavLink to="/Buyer">Buyers</NavLink>
             </li>
             <li>
-                <NavLink to="/Seller">Seller</NavLink>
+                <NavLink to="/Seller">Sellers</NavLink>
             </li>
         </ul>
     </nav>
