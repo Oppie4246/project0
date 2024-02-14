@@ -1,65 +1,66 @@
-// import React, {useState, useEffect} from "react";
-// import { Link } from "react-router-dom";
-// import "./BuyerDisplay.css";
-// //import database from "../database/buyers.json
-
-// import Axios from "axios";
-// import BUYERO from '../database/buyers.json'
+import React, { useState, useEffect } from "react";
 
 
 
+// function to update existing buyer - need to be able to get buyer by ID display the details then get new input from user into newData:
 
+// const [newData, editForm] = useState({});
 
-// function BuyerDisplay(){
-
-//      const [buyers, setBuyers] =useState([]);
-
-
-//      useEffect(() => {
-
-//          Axios.get("../database/buyers.json").then((res) => {
-//              setBuyers(res.data);
-//          }); 
-
-//      }, []);
-
-    
-
-//     return(
-//         <div className="BuyerDisplay">
-
-//             <button>DISPLAY BUYERS</button>
-//             <br></br>
-
-//             {
-//                 BUYERO.map(record => {
-//                     return(
-//                         <div className="container">
-//                             <p>{`Buyer ID: ${record.buyerID}`}</p>
-//                             <p>{`First name: ${record.firstname}`}</p>
-//                             <p>{`Surname: ${record.surname}`}</p>
-//                             <p>{`Email: ${record.email}`}</p>
-//                             <p>{`Telephone: ${record.telephone}`}</p>
-
-//                         </div>
-//                     )
-//                 })
-//             }
-
-//             {/* <button>Display Buyers</button>
-//             {buyers.map((buyer, index) => (
-//                 <div key={index}>
-//                     <p>{`FirstName: ${buyer.firstname}`} </p>
-//                     <p>{`Surname: ${buyer.surname}`}</p>
-//                     <p>{`Email: ${buyer.email}`}</p>
-//                     <p>{`Telephone: ${buyer.telephone}`}</p>
-//                 </div>
-
-//             ))}
-//              */}
-//         </div>
-//     );
+// function editBuyer (e) {
+//   fetch("http://localhost:8000/buyers", {
+//     method: "PATCH",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(newData),
+//   })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error(error));
 // }
 
 
-// export default BuyerDisplay;
+
+
+
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
+  const getData = () => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:8000/buyers", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setPosts(result))
+      .catch((error) => console.log("error", error));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div>
+      {posts.map((post) => (
+
+        <div key={post.buyerID}>
+          <p>{`Buyer ID: ${post.id}`}</p>
+          <p>{`First Name: ${post.firstname}`}</p>
+          <p>{`Surname: ${post.surname}`}</p>
+          <p>{`Email: ${post.email}`}</p>
+          <p>{`Telephone: ${post.telephone}`}</p>
+          <br></br>
+          {/* <input onInput={e=>setForm({...newData, firstname: e.target.value})}/> */}
+          {/* <button onClick={editBuyer()}>Edit</button> */}
+          <br></br>
+        </div>
+
+      ))}
+    </div>
+  );
+};
+
+export default App;
