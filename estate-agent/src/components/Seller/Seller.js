@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SellerList from "./SellerList";
+//import SellerList from "./SellerList";
 import "../styles/Seller.css";
 
 const Seller = () => {

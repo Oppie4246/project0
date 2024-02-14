@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 //import '../styles/SellerForm.css';
-import { Link, useEffect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import profile from '../../assets/profile.png';
-import phone from '../../assets/phone.png';
-import email from '../../assets/email.png';
+// import profile from '../../assets/profile.png';
+// import phone from '../../assets/phone.png';
+// import email from '../../assets/email.png';
 
 
 const PropertyForm = () => {
