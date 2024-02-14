@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState, useReducer, useEffect} from "react";
 
 import {Link, NavLink} from "react-router-dom";
 import "../styles/Nav.css"
@@ -25,13 +25,16 @@ export const Nav = () => {
         
         <ul className={menuOpen ? "open" : ""}>
             <li>
+                <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
                 <NavLink to="/properties">Properties</NavLink>
             </li>
             <li>
-                <NavLink to="/Buyer">Buyer</NavLink>
+                <NavLink to="/Buyer">Buyers</NavLink>
             </li>
             <li>
-                <NavLink to="/Seller">Seller</NavLink>
+                <NavLink to="/Seller">Sellers</NavLink>
             </li>
         </ul>
     </nav>

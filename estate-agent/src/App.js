@@ -26,9 +26,8 @@ import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
 
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 
-// Displays the new buyers/sellers
-import BuyerDisplay from "./components/Buyer/BuyerDisplay"
-import SellerDisplay from "./components/Seller/SellerDisplay"
+
+
 
 
 function App() {
@@ -53,9 +52,8 @@ function App() {
         <Route path="/buyerForm" element={<BuyerForm />} />
         <Route path="/buyerList" element={<BuyerList />} />
         <Route path="/seller" element={<Seller />} />
-        <Route path="/sellerLiist" element={<SellerList />} />
-        <Route path="/BuyerDisplay" element={<BuyerDisplay/>} />
-        <Route path="/SellerDisplay" element={<SellerDisplay/>} />
+        <Route path="/sellerList" element={<SellerList />} />
+  
         </Routes>
     </div>
   );
