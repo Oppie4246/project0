@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import banner from '../../assets/banner.png'
+
 
 import styles from "../styles/BuyerDisplay.module.css"
 
@@ -42,7 +44,14 @@ const Buyer = () => {
 
      return (
         
+        
+
+
+
         <div>
+
+            
+            <img className={styles.image} src={banner} alt="banner"/>
                   
             <Button className={styles.button} to ="/buyerform">REGISTER BUYER</Button>
             

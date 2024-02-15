@@ -3,6 +3,7 @@
   background: linear-gradient(#d3bfae, #d1996b);
   
 
-  min-height: 250vh;
+  min-height: 150vh;
+  
   height: -webkit-fill-available;
 }

@@ -45,3 +45,8 @@ body{
 .buyerBox:hover{
     background-color: #a4b2b0;
 }
+
+.image{
+    max-width: 100%;
+    
+}

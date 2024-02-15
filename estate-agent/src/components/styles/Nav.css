@@ -11,7 +11,7 @@ nav{
     position: sticky;
     top: 0;
 
-    width:100vw;
+    max-width: 100%;
 }
 
 .active{
@@ -73,7 +73,7 @@ nav .menu span{
 
 }
 
-@media (max-width: 900px){
+@media (max-width: 800px){
     nav .menu{
         display:flex;
     }
