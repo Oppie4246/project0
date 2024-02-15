@@ -17,7 +17,7 @@ export default ()=> {
             county: "Greater Manchester",
             postcode: "M1",
             price: 140000,
-            image: "/static/media/image1.42fb22d8050a1b04fc77.jpeg",
+            image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/180k/179285/144749150/179285_APT19CFW_IMG_04_0000_max_476x317.jpeg",
             type: "Flat",
             bedrooms: 2,
             //features:
@@ -31,7 +31,7 @@ export default ()=> {
             county: "Greater Manchester",
             postcode: "M3",
             price: 240000,
-            image: "/static/media/bedroom1.e6efbef9f2e2e515a5f6.jpeg",
+            image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/217k/216824/144195791/216824_RCS190161_IMG_00_0000_max_476x317.jpeg",
             type: "Flat",
             bedrooms: 2,
             //features:
@@ -45,8 +45,8 @@ export default ()=> {
             county: "Greater Manchester",
             postcode: "M4",
             price: 240000,
-            image: "/static/media/gym.662c31fb2dbea8e8ff6e.jpeg",
-            type: "Flat",
+            image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/97k/96668/144740399/96668_198865414022024_IMG_00_0000_max_476x317.jpeg",
+            type: "Terraced",
             bedrooms: 2,
             //features:
             details: "Leaders welcome to the market a well presented and modern, two bedroom apartment in the popular Skyline Central development. Offered on a furnished basis, the property comprises of; entrance hallway with storage/utility cupboard, spacious lounge with large windows which provide ample natural light, modern fitted kitchen with integrated appliances and plenty of storage space, master bedroom with en-suite bathroom, second double bedroom and a contemporary three piece bathroom suite. WiFi is INCLUDED in the rent. Residents have access to the exclusive pool and gym located on the 18th floor of the development. Finally, the building benefits from having a concierge on-site."
@@ -64,7 +64,7 @@ export default ()=> {
 
     return (
         <div id="body">
-            <h1>Properties </h1>
+            <h1 id="propertiesh1">Properties </h1>
             <p><Link to='/sellaproperty'><button>Add New Property</button></Link></p>
             <div onInput={e=>setInput(e)}>
                 <strong>Filter by: </strong>
@@ -115,21 +115,23 @@ export default ()=> {
                     <option>5</option>
                     <option>6+</option>
                 </select>
-                <button id="edit" onClick={e=>window.location.reload()}>Reset filters</button>
+                <button id="edit" className="filter" onClick={e=>window.location.reload()}>Reset filters</button>
             </div>
 
             <br />
 
-            {properties.map(property => {       
-                if((!search.status || search.status == property.status)
-                   && (!search.type || search.type == property.type)
-                   && (!search.county || search.county == property.county)
-                   && (!search.price || (parseInt(search.price.split("£")[1])*1000) > property.price)
-                   && (!search.bedrooms || search.bedrooms == property.bedrooms)){
-                        return <PropertyListing property={property} />
-                } 
-            } )
-            }
+            <div id="propertyBody">
+                {properties.map(property => {       
+                    if((!search.status || search.status == property.status)
+                    && (!search.type || search.type == property.type)
+                    && (!search.county || search.county == property.county)
+                    && (!search.price || (parseInt(search.price.split("£")[1])*1000) > property.price)
+                    && (!search.bedrooms || search.bedrooms == property.bedrooms)){
+                            return <PropertyListing property={property} />
+                    } 
+                } )
+                }
+            </div>
         </div>
     )
 }

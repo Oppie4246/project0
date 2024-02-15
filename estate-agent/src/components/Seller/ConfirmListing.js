@@ -13,11 +13,6 @@ export default ()=> {
                     <tr>
                         <td>
                             <h3>Address <Link to="/sellaproperty"><button>Edit</button></Link></h3>
-                            {/* <p>Address Line 1</p>
-                            <p>Address Line 2</p>
-                            <p>City</p>
-                            <p>County</p>
-                            <p>Postcode</p> */}
                             <p>{sessionStorage.getItem("address1")}</p>
                             <p>{sessionStorage.getItem("address2")}</p>
                             <p>{sessionStorage.getItem("city")}</p>
@@ -26,15 +21,12 @@ export default ()=> {
                         </td>
                         <td>
                             <h3>Property Type <Link to="/sellaproperty"><button>Edit</button></Link></h3>
-                            {/* <p>Flat</p> */}
                             <p>{sessionStorage.getItem("type")}</p>
                             <h3>Bedrooms <Link to="/sellaproperty"><button>Edit</button></Link></h3>
-                            {/* <p>2</p> */}
                             <p>{sessionStorage.getItem("bedrooms")}</p>
                         </td>
                         <td>
                             <h3>Price <Link to="/sellaproperty"><button>Edit</button></Link></h3>
-                            {/* <h3>£240,000 </h3> */}
                             <h3>£{sessionStorage.getItem("price")}</h3>
                         </td>
                         <td>
@@ -48,13 +40,7 @@ export default ()=> {
                     </tr>
                 </table>
 
-                <h3>Property Description <Link to="/sellaproperty"><button>Edit</button></Link></h3>
-                {/* <p>Stunning two bedroom balcony apartment facing the waterfront available 4th February 2024. 
-                    Situated on the 2nd Floor, the apartment offers a large open plan living room and kitchen 
-                    space with integrated appliances, dishwasher, fridge/freezer, oven and hob and a separate 
-                    utility room housing a washer/dryer.
-                    Large double bedrooms with walk through wardrobe to en-suite bathrooms with large walk in showers.
-                </p> */}
+                <h3 id="propertyDesc">Property Description <Link to="/sellaproperty"><button>Edit</button></Link></h3>
                 <p>{sessionStorage.getItem("details")}</p>
 
                 <div id="images">
