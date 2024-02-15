@@ -22,13 +22,11 @@ export const Nav = () => {
             <span></span>
         </div>
         
-        
-        <ul className={menuOpen ? "open" : ""}>
+        <ul className={menuOpen ? "open" : ""}>   
+
             <li>
                 <NavLink to="/">Logout</NavLink>
-            </li>
-
-        <ul className={menuOpen ? "open" : ""}>            
+            </li>         
 
             <li>
                 <NavLink to="/properties">Properties</NavLink>
