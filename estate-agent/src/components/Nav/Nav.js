@@ -23,7 +23,13 @@ export const Nav = () => {
         </div>
         
         
+        <ul className={menuOpen ? "open" : ""}>
+            <li>
+                <NavLink to="/">Logout</NavLink>
+            </li>
+
         <ul className={menuOpen ? "open" : ""}>            
+
             <li>
                 <NavLink to="/properties">Properties</NavLink>
             </li>
