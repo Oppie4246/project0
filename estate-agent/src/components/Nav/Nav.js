@@ -25,7 +25,7 @@ export const Nav = () => {
         
         <ul className={menuOpen ? "open" : ""}>
             <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/">Logout</NavLink>
             </li>
             <li>
                 <NavLink to="/properties">Properties</NavLink>

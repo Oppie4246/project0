@@ -3,7 +3,7 @@ import '../styles/LoginSignup.css';
 import profile from '../../assets/profile.png';
 import email from '../../assets/email.png';
 import lock from '../../assets/lock.jpg';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 const LoginSignup = () => {
 
@@ -12,26 +12,28 @@ const LoginSignup = () => {
     const navigate = useNavigate();
 
     const login = (e) =>{
-        e.preventDefault();
-        delete formData[Object.keys(formData)[0]];        
+        e.preventDefault();  
         console.log(formData);
-        fetch("http://localhost:8000/users"+ formData[Object.keys(formData)[0]])
-            .then((res)=>{res.json();})
-            .then((res)=>{
-                if (Object.keys(res).length=== 0){
-                    console.log('Please enter valid username');
-                }else{
-                    if(res.email === email) {
-                        sessionStorage.setItem('username', email);
-                        navigate('/properties');
-                    } else{
-                        console.log('Please enter valid credentials');
-                    }
-                }
-            })
-            .catch ((error)=>{
-                    console.log('Login Failed due to: ' + error.message);
-                });     
+        // fetch("http://localhost:8000/users") 
+        //     .then((res)=>{res.json();})
+        //     .then((res)=>{res = console.log(JSON.stringify(res))});
+            
+        //         console.log(users);
+                
+        //         if (Object.keys(res).length=== 0){
+        //             console.log('Please enter valid username');
+        //         }else{
+        //             if(res.email === email) {
+        //                 sessionStorage.setItem('username', email);
+        //                 navigate('/properties');
+        //             } else{
+        //                 console.log('Please enter valid credentials');
+        //             }
+        //         }
+        //     })
+        //     .catch ((error)=>{
+        //             console.log('Login Failed due to: ' + error.message);
+        //         });     
         navigate('/properties');
 
     }
@@ -78,7 +80,7 @@ const LoginSignup = () => {
                     <input type="password" id="password" name="password" placeholder="Password" onInput={e => setForm({ ...formData, password: e.target.value })} />
                 </div>
             </div>
-            {action === "Sign Up" ? <div></div> : <div className="forgotPassword">Lost Password? <span>Click Here!</span></div>}
+            {action === "Sign Up" ? <div></div> : <div className="forgotPassword">Lost Password? <span><Link to='/buyer'>Click Here!</Link></span></div>}
             <div className='submitContainer'>
                 {action === "Login" ? <button onClick={(login)}>Login</button> : <button onClick={(signUp)}>Sign Up</button>}
             </div>
