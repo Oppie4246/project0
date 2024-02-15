@@ -11,45 +11,45 @@ export default ()=> {
     const properties = [
         {
             status: "Sold",
-            address1: "Example 1",
-            address2:"Address Line 2",
-            city: "City",
-            county: "Yorkshire",
-            postcode: "Postcode",
+            address1: "Montana House",
+            address2:"Main Street",
+            city: "Manchester",
+            county: "Greater Manchester",
+            postcode: "M1",
             price: 140000,
             image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/180k/179285/144749150/179285_APT19CFW_IMG_04_0000_max_476x317.jpeg",
             type: "Flat",
             bedrooms: 2,
             //features:
-            details: "Stunning two bedroom balcony apartment facing the waterfront available 4th February 2024. Situated on the 2nd Floor, the apartment offers a large open plan living room and kitchen space with integrated appliances, dishwasher, fridge/freezer, oven and hob and a separate utility room housing a washer/dryer. Large double bedrooms with walk through wardrobe to en-suite bathrooms with large walk in showers."
+            details: "Montana House is situated on Princess Street, ideally positioned, especially for those involved in working within the nearby large MRI hospital complex and also for the University of Manchester. This tenth floor apartment comprising; an entrance hallway, open plan living room with modern fitted kitchen, two double bedrooms with the master benefitting from an en-suite shower room and a main bathroom suite."
         },
         {
             status: "For Sale",
-            address1: "Example 2",
-            address2:"Address Line 2",
-            city: "City",
+            address1: "Greengate",
+            address2:"Bridge Street",
+            city: "Salford",
             county: "Greater Manchester",
-            postcode: "Postcode",
+            postcode: "M3",
             price: 240000,
             image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/217k/216824/144195791/216824_RCS190161_IMG_00_0000_max_476x317.jpeg",
             type: "Flat",
             bedrooms: 2,
             //features:
-            details: "Stunning two bedroom balcony apartment facing the waterfront available 4th February 2024. Situated on the 2nd Floor, the apartment offers a large open plan living room and kitchen space with integrated appliances, dishwasher, fridge/freezer, oven and hob and a separate utility room housing a washer/dryer. Large double bedrooms with walk through wardrobe to en-suite bathrooms with large walk in showers."
+            details: "This two bedroom, two bathroom apartment is located on the twenty first floor. Internally the property is well laid out with a superb specification throughout, furnishings are to a high standard and a range of on-site facilities including residents lounge with free tea and coffee as well as free Wi-Fi access and on-site gymnasium. The development also has the added benefit of a on site resident team and 24hr Concierge."
         },
         {
             status: "Withdrawn",
-            address1: "Example 3",
-            address2:"Address Line 2",
-            city: "City",
-            county: "Cumbria",
-            postcode: "Postcode",
+            address1: "Skyline Central 2",
+            address2:"St. Peter's Square",
+            city: "Manchester",
+            county: "Greater Manchester",
+            postcode: "M4",
             price: 240000,
             image: "https://media.rightmove.co.uk/dir/crop/10:9-16:9/97k/96668/144740399/96668_198865414022024_IMG_00_0000_max_476x317.jpeg",
             type: "Terraced",
             bedrooms: 2,
             //features:
-            details: "Stunning two bedroom balcony apartment facing the waterfront available 4th February 2024. Situated on the 2nd Floor, the apartment offers a large open plan living room and kitchen space with integrated appliances, dishwasher, fridge/freezer, oven and hob and a separate utility room housing a washer/dryer. Large double bedrooms with walk through wardrobe to en-suite bathrooms with large walk in showers."
+            details: "Leaders welcome to the market a well presented and modern, two bedroom apartment in the popular Skyline Central development. Offered on a furnished basis, the property comprises of; entrance hallway with storage/utility cupboard, spacious lounge with large windows which provide ample natural light, modern fitted kitchen with integrated appliances and plenty of storage space, master bedroom with en-suite bathroom, second double bedroom and a contemporary three piece bathroom suite. WiFi is INCLUDED in the rent. Residents have access to the exclusive pool and gym located on the 18th floor of the development. Finally, the building benefits from having a concierge on-site."
         }
     ];
 
