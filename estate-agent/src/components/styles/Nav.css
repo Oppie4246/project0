@@ -10,6 +10,8 @@ nav{
 
     position: sticky;
     top: 0;
+
+    width:100vw;
 }
 
 .active{
@@ -22,6 +24,7 @@ nav .title{
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
+    
 }
 
 nav ul{
@@ -70,7 +73,7 @@ nav .menu span{
 
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
     nav .menu{
         display:flex;
     }
@@ -85,7 +88,9 @@ nav .menu span{
         flex-direction:column;
         text-align: center;
         width: 100%;
-        margin-bottom:0.25rem;
+        
+        padding:0;
+        margin:0
         
     }
 
@@ -97,4 +102,10 @@ nav .menu span{
     nav ul li a {
         margin: 0.2rem 0.5rem;
     }
+
+
+
+
 }
+
+
