@@ -97,8 +97,8 @@
 }
 
 .images {
-    width: 400px;
-    height: 250px;
+    max-width: 400px;
+    max-height: 250px;
     padding: 10px;
 }
 
@@ -113,7 +113,22 @@ table td {
     display: flexbox;
     flex-wrap: wrap;
 }
+
 #confirmProperty {
-    margin-left: auto;
-    margin-right: auto;
+    table {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #propertyDesc {
+        text-align: left;
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    button {
+        font-size: 20px;
+        margin-left: 20px;
+        border: 2px solid black;
+    }
 }
