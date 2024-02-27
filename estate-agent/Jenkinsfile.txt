@@ -4,12 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 cd estate-agent
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'npm start'
+                bat 'npm start'
             }
         }
     }
