@@ -1,7 +1,6 @@
 package com.qa.project.presentation;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,15 +12,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.qa.project.business.PropertyService;
 import com.qa.project.persistence.domain.PropertyDomain;
 import com.qa.project.business.dto.PropertyDTO;
 
-
 @RestController
 @RequestMapping("/property")
-pulic class PropertyController {
+public class PropertyController {
     private PropertyService service;
 
     @Autowired
