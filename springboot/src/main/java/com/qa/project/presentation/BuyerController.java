@@ -1,9 +1,9 @@
 package com.qa.project.presentation;
 
 
+import com.qa.project.business.BuyerService;
 import com.qa.project.persistence.domain.BuyerDomain;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,48 @@ import java.util.List;
 @RestController
 public class BuyerController {
 
+    private BuyerService service;
 
-    private List<BuyerDomain> buyer = new ArrayList<>();
+    public BuyerController(BuyerService service) {
+        this.service = service;
+    }
 
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAllBuyer")
     public List<BuyerDomain> getAll() {
-        return this.people;
+        return this.service.getAll();
+    }
+
+    @PostMapping("/createBuyer")
+    public BuyerDomain createBuyer(@RequestBody BuyerDomain Buyer) {
+        return this.service.createBuyer(Buyer);
+    }
+
+    @DeleteMapping("/removeBuyer/{id}")
+    public BuyerDomain removeBuyer(int id) {
+        return this.service.removeBuyer(id);
+    }
+
+    @PatchMapping("/updateBuyer/{id}")
+    public BuyerDomain updateBuyer(@PathVariable int id,
+                                   @RequestParam(required = false) String Fname,
+                                   @RequestParam(required = false) String Surname,
+                                   @RequestParam(required = false) Integer age,
+                                   @RequestParam(required = false) String Email,
+                                   @RequestParam(required = false) Double Telephone) {
+        BuyerDomain toUpdate = this.service.updateBuyer(id, Fname, Surname, age, Email, Telephone);
+
+        if (Fname != null) toUpdate.setFname(Fname);
+        if (Surname != null) toUpdate.setSurname(Surname);
+        if (age != null) toUpdate.setAge(age);
+        if (Email != null) toUpdate.setEmail(Email);
+        if (Telephone != null) toUpdate.setTelephone(Telephone);
+
+        return toUpdate;
+    }
+
+    @GetMapping("getById/{id}")
+    public BuyerDomain getById(int id) {
+        return this.service.getbyId(id);
     }
 }
