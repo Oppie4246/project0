@@ -11,12 +11,10 @@ import com.qa.project.persistence.repo.BookingRepo;
 
 @Service
 public class BookingService {
-
-    // dependencies
+   
     private BookingRepo repo;
     private ModelMapper mapper;
-
-    // constructor
+   
     @Autowired
     public BookingService(BookingRepo repo, ModelMapper mapper) {
         this.repo = repo;
@@ -57,5 +55,4 @@ public class BookingService {
         this.repo.deleteById(id);
         return !this.repo.existsById(id);
     }
-
 }
