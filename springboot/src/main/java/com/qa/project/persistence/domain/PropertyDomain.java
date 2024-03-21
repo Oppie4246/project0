@@ -63,9 +63,7 @@ public class PropertyDomain {
         super();
     }
 
-    public PropertyDomain(Long id, StatusEnum status, String address1, String address2,
-                          String city, String county, String postcode,
-                          Integer price, TypeEnum type, Integer bedrooms, SellerDomain seller) {
+    public PropertyDomain(Long id, StatusEnum status, String address1, String address2, String city, String county, String postcode, Integer price, TypeEnum type, Integer bedrooms, SellerDomain seller) {
         super();
         this.id = id;
         this.status = status;
@@ -80,9 +78,7 @@ public class PropertyDomain {
         this.seller = seller;
     }
 
-    public PropertyDomain(Long id, StatusEnum status, String address1, String address2,
-                          String city, String county, String postcode,
-                          Integer price, TypeEnum type, Integer bedrooms, SellerDomain seller, BuyerDomain buyer) {
+    public PropertyDomain(Long id, StatusEnum status, String address1, String address2, String city, String county, String postcode, Integer price, TypeEnum type, Integer bedrooms, SellerDomain seller, BuyerDomain buyer) {
         super();
         this.id = id;
         this.status = status;
@@ -126,9 +122,7 @@ public class PropertyDomain {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+    public void setCity(String city) { this.city = city; }
 
     public String getCounty() {
         return county;
@@ -154,9 +148,7 @@ public class PropertyDomain {
         this.price = price;
     }
 
-    public Integer getBedrooms() {
-        return bedrooms;
-    }
+    public Integer getBedrooms() { return bedrooms; }
 
     public void setBedrooms(Integer bedrooms) {
         this.bedrooms = bedrooms;
