@@ -1,4 +1,4 @@
-package com.qa.project.enums;
+package com.qa.project.persistence.enums;
 
 public enum TypeEnum {
     DETACHED,
