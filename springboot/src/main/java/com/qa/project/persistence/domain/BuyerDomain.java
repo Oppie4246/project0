@@ -1,5 +1,6 @@
 package com.qa.project.persistence.domain;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -69,3 +70,4 @@ public class BuyerDomain {
         this.id = id;
     }
 }
+

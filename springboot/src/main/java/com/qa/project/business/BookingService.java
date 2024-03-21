@@ -41,8 +41,7 @@ public class BookingService {
 
     public BookingDTO update(Long id, BookingDomain model) {
 
-        BookingDomain existing = this.repo.findById(id)
-                .orElseThrow();
+        BookingDomain existing = this.repo.findById(id).orElseThrow();
 
         existing.setBuyer(model.getBuyer());
         existing.setProperty(model.getProperty());
