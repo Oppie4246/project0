@@ -4,7 +4,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import com.qa.project.business.SellerService;
 import com.qa.project.persistence.domain.SellerDomain;
 import com.qa.project.business.dto.SellerDTO;
@@ -13,6 +20,7 @@ import com.qa.project.business.dto.SellerDTO;
 @RequestMapping("/seller")
 public class SellerController {
     private SellerService service;
+
 
     @Autowired
     public SellerController(SellerService service) {
@@ -34,7 +42,7 @@ public class SellerController {
         return ResponseEntity.ok(this.service.readAll());
     }
 
-    // READ Mapping by ID
+    // READ by ID
     @GetMapping("/{id}")
     public ResponseEntity<SellerDTO> readOne(@PathVariable Long id) {
         return ResponseEntity.ok(this.service.readOne(id));
@@ -52,39 +60,3 @@ public class SellerController {
         return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
-
-
-
-
-//
-//
-//
-//    @GetMapping("/getAll")
-//    public List<SellerDomain> getAll() {
-//        return this.service.getAll();
-//    }
-//
-//    @GetMapping("/get/{id}")
-//    public SellerDomain getById(@PathVariable Integer id) {
-//        return this.service.getById(id);
-//    }
-//
-//    @PostMapping("/create")
-//    public SellerDomain creatSellerDomain(@RequestBody SellerDomain sellerDomain) {
-//        return this.service.createSellerDomain(sellerDomain);
-//    }
-//
-//    @DeleteMapping("/remove/{id}")
-//    public SellerDomain removeSellerDomain(@PathVariable int id) {
-//        return this.service.removeSellerDomain(id);
-//    }
-//
-//    @PatchMapping("/update/{id}")
-//    public SellerDomain updateSellerDomain(@PathVariable Integer id,
-//                                           @RequestParam(required = false) String firstName,
-//                                           @RequestParam(required = false) String surname,
-//                                           @RequestParam(required = false) String email,
-//                                           @RequestParam(required = false) String telephone) {
-//        return this.service.updateSellerDomain(id, firstName, surname, email, telephone);
-//    }
-//}
