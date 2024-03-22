@@ -52,14 +52,3 @@ public class BuyerController {
         return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
-
-
-
-
-
-
-
-
-
-
-

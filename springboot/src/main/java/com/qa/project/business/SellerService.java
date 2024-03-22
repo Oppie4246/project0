@@ -1,56 +1,60 @@
 package com.qa.project.business;
 
-import java.util.ArrayList;
 import java.util.List;
-
+import java.util.stream.Collectors;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.qa.project.persistence.domain.SellerDomain;
+import com.qa.project.business.dto.SellerDTO;
 import com.qa.project.persistence.repo.SellerRepo;
 
 @Service
 public class SellerService {
-    private SellerRepo repo;
-    private List<SellerDomain> sellerDomains = new ArrayList<>();
 
-    public SellerService(SellerRepo repo) {
+    private final SellerRepo repo;
+    private final ModelMapper mapper;
+
+    @Autowired
+    public SellerService(SellerRepo repo, ModelMapper mapper) {
         this.repo = repo;
+        this.mapper = mapper;
     }
 
-    public SellerDomain getById(Integer id) {
-        return this.repo.findById(id).get();
+    private SellerDTO mapToDto(SellerDomain model) {
+        return this.mapper.map(model, SellerDTO.class);
     }
 
-    public List<SellerDomain> getAll() {
-        return this.repo.findAll();
+    public SellerDTO create(SellerDomain model) {
+        return this.mapToDto(this.repo.save(model));
     }
 
-    public SellerDomain createSellerDomain(SellerDomain sellerDomain) {
-        return this.repo.save(sellerDomain);
+    public List<SellerDTO> readAll() {
+        return this.repo.findAll().stream()
+                .map(this::mapToDto)
+                .collect(Collectors.toList());
     }
 
-    public SellerDomain removeSellerDomain(int id) {
-        SellerDomain removed = this.getById(id);
+    public SellerDTO readOne(Long id) {
+        return this.mapToDto(this.repo.findById(id).orElseThrow());
+    }
+
+    public SellerDTO update(Long id, SellerDomain model) {
+
+        SellerDomain existing = this.repo.findById(id)
+                .orElseThrow();
+
+        existing.setFirstName(model.getFirstName());
+        existing.setSurname(model.getSurname());
+        existing.setAddress(model.getAddress());
+        existing.setPostcode(model.getPostcode());
+        existing.setPhone(model.getPhone());
+
+        return this.mapToDto(this.repo.save(existing));
+    }
+
+    public boolean delete(Long id) {
         this.repo.deleteById(id);
-        return removed;
-    }
-
-    public SellerDomain updateSellerDomain(Integer id, String firstName, String surname, String email, String telephone) {
-        SellerDomain toUpdate = this.getById(id);
-
-        if(firstName != null) {
-            toUpdate.setFirstName(firstName);
-        }
-        if(surname != null) {
-            toUpdate.setSurname(surname);
-        }
-        if(email != null) { 
-            toUpdate.setEmail(email);
-        }
-        if(telephone != null) {
-            toUpdate.setTelephone(telephone);
-        }
-
-        return this.repo.save(toUpdate);
+        return !this.repo.existsById(id);
     }
 }

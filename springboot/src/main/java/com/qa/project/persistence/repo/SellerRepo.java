@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.qa.project.persistence.domain.SellerDomain;
 
 @Repository
-public interface SellerRepo extends JpaRepository<SellerDomain, Integer> {
+public interface SellerRepo extends JpaRepository<SellerDomain, Long> {
 
 }
