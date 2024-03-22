@@ -1,73 +1,61 @@
 package com.qa.project.persistence.domain;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-import java.util.List;
-
-
 @Entity
 public class BuyerDomain {
-
-
     @Id
     @GeneratedValue
     private Integer id;
+    private String firstName;
+    private String surname;
+    @Column(unique = true)
+    private String email;
+    @Column(unique = true)
+    private String telephone;
 
-    @Column(name = first_name, nullable = false)
-    private String Fname;
-    private String Surname;
-    private int age;
-    private String Email;
-    private Double Telephone;
-
-
-    public BuyerDomain(String Fname, String Surname, int age, String Email, Double Telephone){
-        this.Fname = Fname;
-        this.Surname = Surname;
-        this.age = age;
-        this.Email = Email;
-        this.Telephone = Telephone;
+    public Integer getId() {
+        return this.id;
     }
 
-
-    //Getter and Setters
-    //Getters
-
-    public String getFname() {
-        return Fname;
-    }
-    public String getSurname(){ return Surname;}
-    public int getAge(){ return age;}
-    public String getEmail(){ return Email;}
-    public Double getTelephone(){ return Telephone;}
-
-    public Integer getId() {return id;}
-
-
-    //Setters
-
-    public void setFname(String Fname){
-        this.Fname = Fname;
-    }
-    public void setSurname(String Surname){
-        this.Surname = Surname;
-    }
-    public void setAge(int age){
-        this.age = age;
-    }
-    public void setEmail(String Email){
-        this.Email = Email;
-    }
-    public void setTelephone(Double Telephone){
-        this.Telephone = Telephone;
-    }
-
-    public void setId(Integer Id){
+    public void setId(Integer id) {
         this.id = id;
     }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelephone() {
+        return this.telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
 }
 
