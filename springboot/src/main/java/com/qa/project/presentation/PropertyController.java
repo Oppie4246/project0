@@ -22,7 +22,7 @@ public class PropertyController {
     private PropertyService service;
 
     @Autowired
-    public PropertyController(PropertyService propertyService) {
+    public PropertyController(PropertyService service) {
         super();
         this.service = service;
     }
