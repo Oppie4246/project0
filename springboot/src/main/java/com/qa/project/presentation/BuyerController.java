@@ -13,6 +13,7 @@ public class BuyerController {
     private BuyerService service;
 
     public BuyerController(BuyerService service) {
+        super();
         this.service = service;
     }
 
