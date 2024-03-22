@@ -15,3 +15,7 @@ Command to start JSON server:
 ### Trello Project 3 link:
 
 https://trello.com/invite/b/iXD1Xy0S/ATTI0251b413fbaccc2912918da9339678b709BC3052/project-3
+
+### Swagger URL Link:
+
+http://localhost:8080/swagger-ui/index.html
