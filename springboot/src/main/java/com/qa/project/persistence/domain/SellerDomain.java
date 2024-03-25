@@ -22,27 +22,23 @@ public class SellerDomain {
     @Column(name = "surname")
     private String surname;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "email", unique = true)
+    private String email;
 
-    @Column(name = "postcode")
-    private String postcode;
-
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "telephone", unique = true)
+    private String telephone;
 
     public SellerDomain() {
         super();
     }
 
-    public SellerDomain(Long id, String firstName, String surname, String address, String postcode, String phone) {
+    public SellerDomain(Long id, String firstName, String surname, String email, String telephone) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.surname = surname;
-        this.address = address;
-        this.postcode = postcode;
-        this.phone = phone;
+        this.email = email;
+        this.telephone = telephone;
     }
 
     public Long getId() {
@@ -69,27 +65,20 @@ public class SellerDomain {
         this.surname = surname;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPostcode() {
-        return postcode;
+    public String getTelephone() {
+        return this.telephone;
     }
 
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }
