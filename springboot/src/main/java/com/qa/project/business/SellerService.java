@@ -46,9 +46,8 @@ public class SellerService {
 
         existing.setFirstName(model.getFirstName());
         existing.setSurname(model.getSurname());
-        existing.setAddress(model.getAddress());
-        existing.setPostcode(model.getPostcode());
-        existing.setPhone(model.getPhone());
+        existing.setEmail(model.getEmail());
+        existing.setTelephone(model.getTelephone());
 
         return this.mapToDto(this.repo.save(existing));
     }

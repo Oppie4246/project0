@@ -5,22 +5,20 @@ public class SellerDTO{
     private Long id;
     private String firstName;
     private String surname;
-    private String address;
-    private String postcode;
-    private String phone;
+    private String email;
+    private String telephone;
 
     public SellerDTO() {
         super();
     }
 
-    public SellerDTO(Long id, String firstName, String surname, String address, String postcode, String phone) {
+    public SellerDTO(Long id, String firstName, String surname, String email, String telephone) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.surname = surname;
-        this.address = address;
-        this.postcode = postcode;
-        this.phone = phone;
+        this.email = email;
+        this.telephone = telephone;
     }
 
     public Long getId() {
@@ -47,27 +45,20 @@ public class SellerDTO{
         this.surname = surname;
     }
 
-    public String getAddress() {
-        return address;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPostcode() {
-        return postcode;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }
