@@ -1,7 +1,10 @@
 package com.qa.project.business.dto;
 
+import jakarta.persistence.Id;
+
 public class SellerDTO{
 
+    @Id
     private Long id;
     private String firstName;
     private String surname;
