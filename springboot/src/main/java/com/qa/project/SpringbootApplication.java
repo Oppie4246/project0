@@ -22,6 +22,8 @@ public class SpringbootApplication {
 				registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:9000");
 			}
 		};
-	
+	}
+
+}
 
 
