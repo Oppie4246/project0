@@ -41,11 +41,11 @@ function App() {
           <Route path="/sellaproperty" element={<SellerPropertyForm />} />
           <Route path="/sellaproperty/confirm" element={<ConfirmListing />} />
           <Route path="/property" element={<Property />} />
-          <Route path="/Buyer" element={<Buyer />} />
-          <Route path="/Seller" element={<Seller />} />
-          <Route path="/SellerForm" element={<SellerForm />} />
-          <Route path="sellproperty" element={<SellerPropertyFrom />} />
-          <Route path="sellproperty/confirm" element={<ConfirmListing />} />
+          <Route path="/buyer" element={<Buyer />} />
+          <Route path="/seller" element={<Seller />} />
+          <Route path="/sellerForm" element={<SellerForm />} />
+          <Route path="/sellproperty" element={<SellerPropertyFrom />} />
+          <Route path="/sellproperty/confirm" element={<ConfirmListing />} />
           <Route path="/property" element={<Property />} />
           <Route path="/buyer" element={<Buyer />} />
           <Route path="/buyerForm" element={<BuyerForm />} />

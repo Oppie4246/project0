@@ -20,7 +20,7 @@ const Buyer = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8080/buyers", requestOptions)
+    fetch("http://localhost:8080/buyer", requestOptions)
       .then((response) => response.json())
       .then((result) => setPosts(result))
       .catch((error) => console.log("error", error));
@@ -65,10 +65,10 @@ const Buyer = () => {
             <div className={styles.buyerBox} key={post.buyerID}>
 
             <p>{`Buyer ID: ${post.id}`}</p>
-            <p>{`First Name: ${post.firstname}`}</p>
+            <p>{`First Name: ${post.firstName}`}</p>
             <p>{`Surname: ${post.surname}`}</p>
-            <p>{`Email: ${post.email}`}</p>
-            <p>{`Telephone: ${post.telephone}`}</p>
+            <p>{`Address: ${post.address}`}</p>            
+            <p>{`Phone: ${post.phone}`}</p>
             
             <br></br>
             </div>
