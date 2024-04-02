@@ -41,8 +41,9 @@ const LoginSignup = () => {
     const signUp = (e) =>{
         e.preventDefault();
         console.log(formData);
-        fetch("http://localhost:8000/users", {
+        fetch("http://localhost:8080/users", {
             method: "POST",
+            mode: "no-cors",
             headers: {
                 "content-Type": "application/json",
             },

@@ -14,8 +14,9 @@ const BuyerForm = () => {
     function submitForm(e){
         e.preventDefault();
          
-            fetch("http://localhost:8000/buyers", {
+            fetch("http://localhost:8080/buyers", {
                 method: "POST",
+                mode: "no-cors",
                 headers: {
                     "content-Type": "application/json",
                 },

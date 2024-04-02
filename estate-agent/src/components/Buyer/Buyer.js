@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import banner from '../../assets/banner.png'
-
-
 import styles from "../styles/BuyerDisplay.module.css"
+
 
 const Buyer = () => {
 
@@ -22,7 +20,7 @@ const Buyer = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/buyers", requestOptions)
+    fetch("http://localhost:8080/buyers", requestOptions)
       .then((response) => response.json())
       .then((result) => setPosts(result))
       .catch((error) => console.log("error", error));
