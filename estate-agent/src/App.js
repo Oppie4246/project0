@@ -26,7 +26,6 @@ import SellerPropertyForm from "./components/Seller/SellerPropertyForm";
 
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 
-import banner from "../src/assets/banner.png"
 
 function App() {
   return (
