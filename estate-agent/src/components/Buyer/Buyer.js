@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import banner from '../../assets/banner.png'
-
-
 import styles from "../styles/BuyerDisplay.module.css"
 
 const Buyer = () => {
