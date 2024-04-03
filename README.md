@@ -10,7 +10,7 @@ File Directory Route:
 
 Command to start JSON server:
 
-``json-server --watch db.json -p 8000``
+``npx json-server --watch db.json -p 8000``
 
 ### Trello Project 3 link:
 
