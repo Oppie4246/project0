@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 package com.qa.project.persistence.domain;
 
 import jakarta.persistence.Entity;
@@ -125,4 +123,3 @@ public class PropertyDomain {
         this.details = details;
     }
 }
->>>>>>> Stashed changes
