@@ -1,60 +1,56 @@
 package com.qa.project.presentation;
 
+import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.qa.project.business.SellerService;
 import com.qa.project.persistence.domain.SellerDomain;
-import com.qa.project.business.dto.SellerDTO;
 
 @RestController
-@RequestMapping("/seller")
 public class SellerController {
     private SellerService service;
 
-
-    @Autowired
     public SellerController(SellerService service) {
-        super();
         this.service = service;
     }
 
-    // CRUD
+    private List<SellerDomain> sellerDomains = new ArrayList<>();
 
-    // CREATE Mapping
-    @CrossOrigin (origins = "http://localhost:3000/seller")
-    @PostMapping
-    public ResponseEntity<SellerDTO> create(@RequestBody SellerDomain model) {
-        return new ResponseEntity<>(this.service.create(model), HttpStatus.CREATED);
+    @GetMapping("/getAll")
+    public List<SellerDomain> getAll() {
+        return this.service.getAll();
     }
 
-    // READ Mapping
-    @CrossOrigin (origins = "http://localhost:3000/seller")
-    @GetMapping
-    public ResponseEntity<List<SellerDTO>> readAll() {
-        return ResponseEntity.ok(this.service.readAll());
+    @GetMapping("/get/{id}")
+    public SellerDomain getById(@PathVariable Integer id) {
+        return this.service.getById(id);
     }
 
-    // READ by ID
-    @CrossOrigin (origins = "http://localhost:3000/seller")
-    @GetMapping("/{id}")
-    public ResponseEntity<SellerDTO> readOne(@PathVariable Long id) {
-        return ResponseEntity.ok(this.service.readOne(id));
+    @PostMapping("/create")
+    public SellerDomain createSellerDomain(@RequestBody SellerDomain sellerDomain) {
+        return this.service.createSellerDomain(sellerDomain);
     }
 
-    // UPDATE Mapping
-    @CrossOrigin (origins = "http://localhost:3000/seller")
-    @PutMapping("/{id}")
-    public ResponseEntity<SellerDTO> update(@PathVariable Long id, @RequestBody SellerDomain model) {
-        return new ResponseEntity<>(this.service.update(id, model), HttpStatus.ACCEPTED);
+    @DeleteMapping("/remove/{id}") 
+    public SellerDomain removeSellerDomain(@PathVariable int id) {
+        return this.service.removeSellerDomain(id);
     }
 
-    // DELETE Mapping
-    @CrossOrigin (origins = "http://localhost:3000/seller")
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Object> delete(@PathVariable Long id) {
-        return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
+    @PatchMapping("/update/{id}")
+    public SellerDomain updateSellerDomain(@PathVariable Integer id,
+                                           @RequestParam(required = false) String firstName, 
+                                           @RequestParam(required = false) String surname,
+                                           @RequestParam(required = false) String email, 
+                                           @RequestParam(required = false) String telephone) {
+        return this.service.updateSellerDomain(id, firstName, surname, email, telephone);
     }
 }

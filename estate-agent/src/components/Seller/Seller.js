@@ -19,22 +19,12 @@ const Seller = () => {
           var requestOptions = {
             method: "GET",
             redirect: "follow",
-            mode: 'no-cors',
           };
-
-          console.log("hello1");
-
-          fetch("http://localhost:8080/seller")
-          .then(response => response.json())
-          .then(result => console.log(result))
-          .catch(error => console.log(error));
-
-//          fetch("http://localhost:8080/seller", requestOptions)
-//          .then(response) => response.json())
-//          .then((result) => setPosts(result))
-//          .catch((error) => {
-//          console.log("hello4");
-//          console.log("error", error)});
+      
+          fetch("http://localhost:8000/sellers", requestOptions)
+            .then((response) => response.json())
+            .then((result) => setPosts(result))
+            .catch((error) => console.log("error", error));
         };
       
         useEffect(() => {

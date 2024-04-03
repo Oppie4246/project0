@@ -1,54 +1,56 @@
 package com.qa.project.presentation;
 
+import java.util.ArrayList;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.qa.project.business.BuyerService;
 import com.qa.project.persistence.domain.BuyerDomain;
-import com.qa.project.business.dto.BuyerDTO;
 
 @RestController
-@RequestMapping("/buyer")
 public class BuyerController {
     private BuyerService service;
 
-    @Autowired
     public BuyerController(BuyerService service) {
-        super();
         this.service = service;
     }
 
-    // CRUD
+    private List<BuyerDomain> buyerDomains = new ArrayList<>();
 
-    // CREATE Mapping
-    @PostMapping
-    public ResponseEntity<BuyerDTO> create(@RequestBody BuyerDomain model) {
-        return new ResponseEntity<>(this.service.create(model), HttpStatus.CREATED);
+    @GetMapping("/getAll")
+    public List<BuyerDomain> getAll() {
+        return this.service.getAll();
     }
 
-    // READ Mapping
-    @GetMapping
-    public ResponseEntity<List<BuyerDTO>> readAll() {
-        return ResponseEntity.ok(this.service.readAll());
+    @GetMapping("/get/{id}")
+    public BuyerDomain getById(@PathVariable Integer id) {
+        return this.service.getById(id);
     }
 
-    // READ Mapping by ID
-    @GetMapping("/{id}")
-    public ResponseEntity<BuyerDTO> readOne(@PathVariable Long id) {
-        return ResponseEntity.ok(this.service.readOne(id));
+    @PostMapping("/create")
+    public BuyerDomain createBuyerDomain(@RequestBody BuyerDomain buyerDomain) {
+        return this.service.createBuyerDomain(buyerDomain);
     }
 
-    // UPDATE Mapping
-    @PutMapping("/{id}")
-    public ResponseEntity<BuyerDTO> update(@PathVariable Long id, @RequestBody BuyerDomain model) {
-        return new ResponseEntity<>(this.service.update(id, model), HttpStatus.ACCEPTED);
+    @DeleteMapping("/remove/{id}") 
+    public BuyerDomain removeBuyerDomain(@PathVariable int id) {
+        return this.service.removeBuyerDomain(id);
     }
 
-    // DELETE Mapping
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Object> delete(@PathVariable Long id) {
-        return new ResponseEntity<>(this.service.delete(id) ? HttpStatus.NO_CONTENT : HttpStatus.INTERNAL_SERVER_ERROR);
+    @PatchMapping("/update/{id}")
+    public BuyerDomain updateBuyerDomain(@PathVariable Integer id,
+                                           @RequestParam(required = false) String firstName, 
+                                           @RequestParam(required = false) String surname,
+                                           @RequestParam(required = false) String email, 
+                                           @RequestParam(required = false) String telephone) {
+        return this.service.updateBuyerDomain(id, firstName, surname, email, telephone);
     }
 }
