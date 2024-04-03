@@ -16,6 +16,7 @@ public class BuyerService {
         this.repo = repo;
     }
 
+    @SuppressWarnings("null")
     public BuyerDomain getById(Integer id) {
         return this.repo.findById(id).get();
     }
@@ -24,6 +25,7 @@ public class BuyerService {
         return this.repo.findAll();
     }
 
+    @SuppressWarnings("null")
     public BuyerDomain createBuyerDomain(BuyerDomain buyerDomain) {
         return this.repo.save(buyerDomain);
     }
@@ -34,6 +36,7 @@ public class BuyerService {
         return removed;
     }
 
+    @SuppressWarnings("null")
     public BuyerDomain updateBuyerDomain(Integer id, String firstName, String surname) {
         BuyerDomain toUpdate = this.getById(id);
 

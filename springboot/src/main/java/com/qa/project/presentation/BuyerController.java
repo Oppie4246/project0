@@ -23,6 +23,7 @@ public class BuyerController {
         this.service = service;
     }
 
+    @SuppressWarnings("unused")
     private List<BuyerDomain> buyerDomains = new ArrayList<>();
 
     @GetMapping("/getAllBuyers")

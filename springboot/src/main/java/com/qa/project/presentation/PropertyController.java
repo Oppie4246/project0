@@ -23,6 +23,7 @@ public class PropertyController {
         this.service = service;
     }
 
+    @SuppressWarnings("unused")
     private List<PropertyDomain> propertyDomains = new ArrayList<>();
 
     @GetMapping("/getAllProperties")
