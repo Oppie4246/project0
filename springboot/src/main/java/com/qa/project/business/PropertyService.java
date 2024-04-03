@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 package com.qa.project.business;
 
 import java.util.List;
@@ -73,4 +71,3 @@ public class PropertyService {
         return this.repo.save(toUpdate);
     }
 }
->>>>>>> Stashed changes
