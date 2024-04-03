@@ -25,27 +25,27 @@ public class SellerController {
 
     private List<SellerDomain> sellerDomains = new ArrayList<>();
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAllSellers")
     public List<SellerDomain> getAll() {
         return this.service.getAll();
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/getSellers/{id}")
     public SellerDomain getById(@PathVariable Integer id) {
         return this.service.getById(id);
     }
 
-    @PostMapping("/create")
+    @PostMapping("/createSellers")
     public SellerDomain createSellerDomain(@RequestBody SellerDomain sellerDomain) {
         return this.service.createSellerDomain(sellerDomain);
     }
 
-    @DeleteMapping("/remove/{id}") 
+    @DeleteMapping("/removeSellers/{id}") 
     public SellerDomain removeSellerDomain(@PathVariable int id) {
         return this.service.removeSellerDomain(id);
     }
 
-    @PatchMapping("/update/{id}")
+    @PatchMapping("/updateSellers/{id}")
     public SellerDomain updateSellerDomain(@PathVariable Integer id,
                                            @RequestParam(required = false) String firstName, 
                                            @RequestParam(required = false) String surname,

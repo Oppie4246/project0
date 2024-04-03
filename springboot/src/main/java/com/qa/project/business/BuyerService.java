@@ -34,7 +34,7 @@ public class BuyerService {
         return removed;
     }
 
-    public BuyerDomain updateBuyerDomain(Integer id, String firstName, String surname, String email, String telephone) {
+    public BuyerDomain updateBuyerDomain(Integer id, String firstName, String surname) {
         BuyerDomain toUpdate = this.getById(id);
 
         if(firstName != null) {
@@ -42,12 +42,6 @@ public class BuyerService {
         }
         if(surname != null) {
             toUpdate.setSurname(surname);
-        }
-        if(email != null) { 
-            toUpdate.setEmail(email);
-        }
-        if(telephone != null) {
-            toUpdate.setTelephone(telephone);
         }
 
         return this.repo.save(toUpdate);

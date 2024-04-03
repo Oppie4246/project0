@@ -48,10 +48,8 @@ const Buyer = () => {
 
 
 
-        <div>
-
+        <div>          
             
-            <img className={styles.image} src={banner} alt="banner"/>
                   
             <Button className={styles.button} to ="/buyerform">REGISTER BUYER</Button>
             

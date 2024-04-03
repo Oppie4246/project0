@@ -25,32 +25,30 @@ public class BuyerController {
 
     private List<BuyerDomain> buyerDomains = new ArrayList<>();
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAllBuyers")
     public List<BuyerDomain> getAll() {
         return this.service.getAll();
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/getBuyers/{id}")
     public BuyerDomain getById(@PathVariable Integer id) {
         return this.service.getById(id);
     }
 
-    @PostMapping("/create")
+    @PostMapping("/createBuyers")
     public BuyerDomain createBuyerDomain(@RequestBody BuyerDomain buyerDomain) {
         return this.service.createBuyerDomain(buyerDomain);
     }
 
-    @DeleteMapping("/remove/{id}") 
+    @DeleteMapping("/removeBuyers/{id}") 
     public BuyerDomain removeBuyerDomain(@PathVariable int id) {
         return this.service.removeBuyerDomain(id);
     }
 
-    @PatchMapping("/update/{id}")
+    @PatchMapping("/updateBuyers/{id}")
     public BuyerDomain updateBuyerDomain(@PathVariable Integer id,
                                            @RequestParam(required = false) String firstName, 
-                                           @RequestParam(required = false) String surname,
-                                           @RequestParam(required = false) String email, 
-                                           @RequestParam(required = false) String telephone) {
-        return this.service.updateBuyerDomain(id, firstName, surname, email, telephone);
+                                           @RequestParam(required = false) String surname) {
+        return this.service.updateBuyerDomain(id, firstName, surname);
     }
 }
