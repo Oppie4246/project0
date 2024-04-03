@@ -23,6 +23,7 @@ public class SellerController {
         this.service = service;
     }
 
+    @SuppressWarnings("unused")
     private List<SellerDomain> sellerDomains = new ArrayList<>();
 
     @GetMapping("/getAllSellers")

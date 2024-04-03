@@ -16,6 +16,7 @@ public class PropertyService {
         this.repo = repo;
     }
 
+    @SuppressWarnings("null")
     public PropertyDomain getById(Integer id) {
         return this.repo.findById(id).get();
     }
@@ -24,6 +25,7 @@ public class PropertyService {
         return this.repo.findAll();
     }
 
+    @SuppressWarnings("null")
     public PropertyDomain createPropertyDomain(PropertyDomain propertyDomain) {
         return this.repo.save(propertyDomain);
     }
@@ -34,6 +36,7 @@ public class PropertyService {
         return removed;
     }
 
+    @SuppressWarnings("null")
     public PropertyDomain updatePropertyDomain(Integer id, String status, String address1, String address2, String city, String county, String postcode, Integer price, String type, Integer bedrooms, String details) {
         PropertyDomain toUpdate = this.getById(id);
 

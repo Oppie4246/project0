@@ -16,6 +16,7 @@ public class SellerService {
         this.repo = repo;
     }
 
+    @SuppressWarnings("null")
     public SellerDomain getById(Integer id) {
         return this.repo.findById(id).get();
     }
@@ -24,6 +25,7 @@ public class SellerService {
         return this.repo.findAll();
     }
 
+    @SuppressWarnings("null")
     public SellerDomain createSellerDomain(SellerDomain sellerDomain) {
         return this.repo.save(sellerDomain);
     }
@@ -34,6 +36,7 @@ public class SellerService {
         return removed;
     }
 
+    @SuppressWarnings("null")
     public SellerDomain updateSellerDomain(Integer id, String firstName, String surname, String email, String telephone) {
         SellerDomain toUpdate = this.getById(id);
 
