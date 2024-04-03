@@ -5,14 +5,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-
-export default ()=> {
+export default () => {
 
     const properties = [
         {
             status: "Sold",
             address1: "Montana House",
-            address2:"Main Street",
+            address2: "Main Street",
             city: "Manchester",
             county: "Greater Manchester",
             postcode: "M1",
@@ -26,7 +25,7 @@ export default ()=> {
         {
             status: "For Sale",
             address1: "Greengate",
-            address2:"Bridge Street",
+            address2: "Bridge Street",
             city: "Salford",
             county: "Greater Manchester",
             postcode: "M3",
@@ -40,7 +39,7 @@ export default ()=> {
         {
             status: "Withdrawn",
             address1: "Skyline Central 2",
-            address2:"St. Peter's Square",
+            address2: "St. Peter's Square",
             city: "Manchester",
             county: "Greater Manchester",
             postcode: "M4",
@@ -56,7 +55,7 @@ export default ()=> {
     let [search, setSearch] = useState({});
 
     function setInput(e) {
-        let newData = {...search};
+        let newData = { ...search };
         let newKey = e.target.name;
         newData[newKey] = e.target.value;
         setSearch(newData);
@@ -66,7 +65,7 @@ export default ()=> {
         <div id="body">
             <h1 id="propertiesh1">Properties </h1>
             <p><Link to='/sellaproperty'><button>Add New Property</button></Link></p>
-            <div onInput={e=>setInput(e)}>
+            <div onInput={e => setInput(e)}>
                 <strong>Filter by: </strong>
                 <select name="status" id="status">
                     <option>status</option>
@@ -115,21 +114,21 @@ export default ()=> {
                     <option>5</option>
                     <option>6+</option>
                 </select>
-                <button id="edit" className="filter" onClick={e=>window.location.reload()}>Reset filters</button>
+                <button id="edit" className="filter" onClick={e => window.location.reload()}>Reset filters</button>
             </div>
 
             <br />
 
             <div id="propertyBody">
-                {properties.map(property => {       
-                    if((!search.status || search.status == property.status)
-                    && (!search.type || search.type == property.type)
-                    && (!search.county || search.county == property.county)
-                    && (!search.price || (parseInt(search.price.split("£")[1])*1000) > property.price)
-                    && (!search.bedrooms || search.bedrooms == property.bedrooms)){
-                            return <PropertyListing property={property} />
-                    } 
-                } )
+                {properties.map(property => {
+                    if ((!search.status || search.status == property.status)
+                        && (!search.type || search.type == property.type)
+                        && (!search.county || search.county == property.county)
+                        && (!search.price || (parseInt(search.price.split("£")[1]) * 1000) > property.price)
+                        && (!search.bedrooms || search.bedrooms == property.bedrooms)) {
+                        return <PropertyListing property={property} />
+                    }
+                })
                 }
             </div>
         </div>
