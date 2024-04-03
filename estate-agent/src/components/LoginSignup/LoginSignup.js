@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../styles/LoginSignup.css';
 import profile from '../../assets/profile.png';
 import email from '../../assets/email.png';
@@ -41,9 +41,8 @@ const LoginSignup = () => {
     const signUp = (e) =>{
         e.preventDefault();
         console.log(formData);
-        fetch("http://localhost:8080/users", {
+        fetch("http://localhost:8000/users", {
             method: "POST",
-            mode: "no-cors",
             headers: {
                 "content-Type": "application/json",
             },
@@ -53,6 +52,23 @@ const LoginSignup = () => {
         .then((data) => console.log(data))
         .catch((error) => console.log(error));
         setAction("Login");
+    }
+
+    const Users = () => {
+        const [users, setUsers] = useState();
+
+        return (
+            <article>
+                <h2>Users List</h2>
+                {users?.length
+                    ? (
+                        <ul>
+                            {users.map((user, i) => <li key={i}>(user?.username)</li>)}
+                        </ul>
+                    ) : <p>No users to display</p>
+                }
+            </article>
+        );
     }
 
 

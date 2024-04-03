@@ -3,54 +3,37 @@ package com.qa.project.persistence.domain;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "seller")
 public class SellerDomain {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "seller_id")
-    private Long id;
-
-    @Column(name = "first_name")
+    @GeneratedValue
+    private Integer id;
     private String firstName;
-
-    @Column(name = "surname")
     private String surname;
-
-    @Column(name = "email", unique = true)
+    @Column(unique = true)
     private String email;
-
-    @Column(name = "telephone", unique = true)
+    @Column(unique = true)
     private String telephone;
 
-    public SellerDomain() {
-        super();
-    }
-
-    public SellerDomain(Long id, String firstName, String surname, String email, String telephone) {
-        super();
-        this.id = id;
+    public SellerDomain(String firstName, String surname, String email, String telephone) {
         this.firstName = firstName;
         this.surname = surname;
         this.email = email;
         this.telephone = telephone;
     }
-
-    public Long getId() {
-        return id;
+    
+    public Integer getId() {
+        return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -58,7 +41,7 @@ public class SellerDomain {
     }
 
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
     public void setSurname(String surname) {
@@ -66,7 +49,7 @@ public class SellerDomain {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -80,5 +63,4 @@ public class SellerDomain {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
-
 }
